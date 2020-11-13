@@ -37,7 +37,7 @@ public class CollisionDetection : MonoBehaviour
             
         } else if(hidden == 0 && planet == "Planet"  )
         {
-            Debug.Log("Moon Hidden");
+            //Debug.Log("Moon Hidden");
             sprite.sortingOrder = -5;
             gameObject.layer = 10;
         } else if(otherObj.ToString() == "P1 (UnityEngine.GameObject)") {
@@ -54,9 +54,9 @@ public class CollisionDetection : MonoBehaviour
     {
         GameObject otherObj = collider.gameObject;
         planet = collider.gameObject.tag;
-        if(otherObj.ToString() == "Planet (UnityEngine.GameObject)"  )
+        if(planet == "Planet"  )
         {
-            Debug.Log("Moon Shown");
+            //Debug.Log("Moon Shown");
             sprite.sortingOrder = 2;
             gameObject.layer = 9;
             //gameObject.SetActive(true);

@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -42,6 +42,7 @@ public class Ball : MonoBehaviour
     {
         theBall.isKinematic = false;
         isPressed = false;
+        LevelTracker.ShotCounter();
 
         StartCoroutine(ReleaseBall());
     }
@@ -63,6 +64,7 @@ public class Ball : MonoBehaviour
             yield return new WaitForSeconds(5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Enemy.enemiesAlive = 0;
+            LevelTracker.shotsFired = 0;
         }
     }
 }

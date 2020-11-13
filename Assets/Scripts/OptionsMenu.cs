@@ -158,6 +158,14 @@ public class OptionsMenu : MonoBehaviour
     {
         sfxLoop.Stop();
     }
+
+        public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("shots", 0);
+        
+        PlayerPrefs.SetInt("Stage2", 0);
+        //PlayerPrefs.DeleteAll();
+    }
 }
 
 [System.Serializable]
