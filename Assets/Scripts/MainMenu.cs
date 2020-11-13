@@ -44,6 +44,8 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+
+
         public IEnumerator loadStart()
     {
         loadingScreen.SetActive(true);

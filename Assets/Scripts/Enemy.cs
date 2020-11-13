@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
-        Debug.Log (colInfo.relativeVelocity.magnitude);
+        //Debug.Log (colInfo.relativeVelocity.magnitude);
     }
 
     void Die ()
@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
         enemiesAlive--;
         if(enemiesAlive >= 0)
         {
-            Debug.Log ("You win!!");
+           // Debug.Log ("You win!!");
         }
         Destroy(gameObject);
 

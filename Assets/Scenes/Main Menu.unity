@@ -723,7 +723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d9cc7f3d43c174781171663bcecd85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLevel: GamePlay
+  firstLevel: WorldMap
   optionsScreen: {fileID: 1856173222}
   loadingScreen: {fileID: 1502207819}
   loadingIcon: {fileID: 887589689}
@@ -1411,6 +1411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options Screen
       objectReference: {fileID: 0}
+    - target: {fileID: 9039006713976178404, guid: 78ab013540a5ac74d901a05748c78b80, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1116309974}
     - target: {fileID: 9039006714756475589, guid: 78ab013540a5ac74d901a05748c78b80, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

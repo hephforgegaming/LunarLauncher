@@ -8,7 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject optionsScreen, pauseScreen, loadingScreen, loadingIcon;
-    public string mainMenuScene;
+    public string mainMenuScene, worldMapScene;
 
     public Text loadingText;
 
@@ -54,6 +54,14 @@ public class PauseMenu : MonoBehaviour
         optionsScreen.SetActive(false);
     }
 
+    public void ExitLevel()
+    {
+        //SceneManager.LoadScene(mainMenuScene);
+
+        //Time.timeScale = 1f;
+        StartCoroutine(exitLevel());
+    }
+
     public void QUitToMain()
     {
         //SceneManager.LoadScene(mainMenuScene);
@@ -67,6 +75,31 @@ public class PauseMenu : MonoBehaviour
         loadingScreen.SetActive(true);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuScene);
+
+        asyncLoad.allowSceneActivation = false;
+
+        while(!asyncLoad.isDone)
+        {
+            if(asyncLoad.progress >= .9f)
+            {
+                loadingText.text = "Press any key to continue";
+                loadingIcon.SetActive(false);
+                if(Input.anyKeyDown)
+                {
+                    asyncLoad.allowSceneActivation = true;
+                    Time.timeScale = 1f;
+                }
+            }
+
+            yield return null;
+        }
+    }
+
+        public IEnumerator exitLevel()
+    {
+        loadingScreen.SetActive(true);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(worldMapScene);
 
         asyncLoad.allowSceneActivation = false;
 
