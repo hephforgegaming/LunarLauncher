@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
 {
     public string firstLevel;
 
-    public GameObject optionsScreen, loadingScreen, loadingIcon;
+    public GameObject optionsScreen, loadingScreen, loadingIcon, finalScore;
 
         public Text loadingText;
     // Start is called before the first frame update
@@ -25,7 +25,9 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
+        finalScore.SetActive(false);
         //SceneManager.LoadScene(firstLevel);
+
         StartCoroutine(loadStart());
     }
 
@@ -44,7 +46,21 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-
+        public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("shots", 0);
+        for(int i = 0; i < 11; i++)
+        {
+            PlayerPrefs.SetInt("Stage" + i, 0);
+            PlayerPrefs.SetInt("Stage" + i + "-completed", 0);
+            PlayerPrefs.SetInt("Stage" + i + "-shots", 0);
+        }
+        
+        //PlayerPrefs.SetInt("Stage2", 0);
+        //PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("All game values reset");
+    }
 
         public IEnumerator loadStart()
     {
