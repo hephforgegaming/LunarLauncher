@@ -48,6 +48,7 @@ public class MainMenu : MonoBehaviour
 
         public void ResetProgress()
     {
+         finalScore.SetActive(false);
         PlayerPrefs.SetInt("shots", 0);
         for(int i = 0; i < 11; i++)
         {
