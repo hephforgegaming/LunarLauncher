@@ -7,13 +7,13 @@ using TMPro;
 public class LevelTracker : MonoBehaviour
 {
     public LevelManager unlockLevel;
-    public static string levelBeingPlayed;
+    public static string levelBeingPlayed, currentLevel, bestShots, levelCompleted;
 
     //private LevelManager levelManagerScript;
 
-    public GameObject levelCompleteScreen, levelStartScreen, scoreTracker;
+    public GameObject levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
     public static LevelTracker instance;
-    public TextMeshProUGUI shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots; 
+    public TextMeshProUGUI shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
      // Start is called before the first frame update
 
         public List<GameObject> enemies = new List<GameObject>();
@@ -23,6 +23,7 @@ public class LevelTracker : MonoBehaviour
         private int enemiesLeft, enemiesToKill;
         private int enemiesKilled = 0;
         public int shotGoal;
+        private int shotTotal, bestShot;
 
 
         //public RoomActivator theRoom;
@@ -36,13 +37,20 @@ public class LevelTracker : MonoBehaviour
 
     void Start()
     {
-        //levelManagerScript = levelManager.GetComponent<LevelManager>();
 
+        Time.timeScale = 0f;
+        bestShots = currentLevel + "-shots";
+        levelCompleted = currentLevel + "-completed";
+        //levelManagerScript = levelManager.GetComponent<LevelManager>();
+        shotTotal = PlayerPrefs.GetInt("shots");
         enemiesLeft = enemies.Count;
         enemiesToKill = enemies.Count;
         startEnemyCount.text = enemiesToKill.ToString();
         startShotGoal.text = shotGoal.ToString();
         shotsFired = 0;
+        bestShot = PlayerPrefs.GetInt(bestShots);
+        Debug.Log(PlayerPrefs.GetInt(bestShots) + " is you best score for this level");
+        bestScore.text = PlayerPrefs.GetInt(bestShots).ToString();
 
     }
 
@@ -58,7 +66,7 @@ public class LevelTracker : MonoBehaviour
                     enemies.RemoveAt(i);
                     i--;
                     enemiesLeft--;
-                    Debug.Log((i + 1) + " enemies left!");
+                    //Debug.Log((i + 1) + " enemies left!");
                     enemiesKilled++;
 
                 }
@@ -66,7 +74,7 @@ public class LevelTracker : MonoBehaviour
 
             if(enemies.Count == 0)
             {
-                Debug.Log("Level Cleared!");
+                //Debug.Log("Level Cleared!");
                 LevelComplete();            
             }
         }
@@ -79,58 +87,38 @@ public class LevelTracker : MonoBehaviour
     {
         //Debug.Log(shotsFired + " shots fired!");
         shotsFired++;
-        Debug.Log(shotsFired + " shots fired!");
+        //Debug.Log(shotsFired + " shots fired!");
 
     }
 
         public void LevelComplete()
     {
+        //Debug.Log(levelBeingPlayed + " is the next level");
         finalShotsFired.text = shotsFired.ToString();
         finalEnemiesKilled.text = enemiesKilled.ToString();
         finalShotGoal.text = shotGoal.ToString();
         levelCompleteScreen.SetActive(true);
-        PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") + shotsFired);
+        PlayerPrefs.SetInt(levelBeingPlayed, 1);
+        PlayerPrefs.SetInt(levelCompleted, 1);
+        if(PlayerPrefs.GetInt(bestShots) == 0 )
+        {
+            Debug.Log(shotTotal);
+            PlayerPrefs.SetInt(bestShots, shotsFired);
+            PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") + shotsFired);
+        } else if (shotsFired < PlayerPrefs.GetInt(bestShots))
+        {
+            Debug.Log(shotTotal);
+            PlayerPrefs.SetInt(bestShots, shotsFired);
+            PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") - bestShot + shotsFired);
+        }
 
-        Debug.Log(PlayerPrefs.GetInt(levelBeingPlayed));
-    if(levelBeingPlayed == "Stage1")
+        if(currentLevel == "Stage10")
         {
-            Debug.Log(levelBeingPlayed + " has been completed");
-            PlayerPrefs.SetInt("Stage2", 1);
-             unlockLevel.Stage2 = true;
-             Debug.Log("Enabling Stage 2");
-        } else if(gameObject.name == "Stage2")
-        {
+            Debug.Log("This is the last level");
+            PlayerPrefs.SetInt("HighScore",PlayerPrefs.GetInt("shots"));
+            Debug.Log("High Score is: " + PlayerPrefs.GetInt("HighScore"));
 
-        } else if(gameObject.name == "Stage3")
-        {
-
-        } else if(gameObject.name == "Stage4")
-        {
-             
-        }else if(gameObject.name == "Stage5")
-        {
-
-        }else if(gameObject.name == "Stage6")
-        {
-            
-        }else if(gameObject.name == "Stage7")
-        {
-           
-        }else if(gameObject.name == "Stage8")
-        {
-
-        }else if(gameObject.name == "Stage9")
-        {
-            
-        }else if(gameObject.name == "Stage10")
-        {
-
- 
-        }  
-            
-        
-    
-    
+        }
     
     }
 
@@ -138,5 +126,6 @@ public class LevelTracker : MonoBehaviour
     {
         levelStartScreen.SetActive(false);
         scoreTracker.SetActive(true);
+        Time.timeScale = 1f;
     }
 }

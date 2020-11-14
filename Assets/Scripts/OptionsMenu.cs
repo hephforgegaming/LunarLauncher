@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenu : MonoBehaviour
 {
@@ -164,7 +165,9 @@ public class OptionsMenu : MonoBehaviour
         PlayerPrefs.SetInt("shots", 0);
         
         PlayerPrefs.SetInt("Stage2", 0);
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("All game values reset");
     }
 }
 

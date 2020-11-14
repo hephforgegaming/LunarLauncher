@@ -44,7 +44,15 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-
+        public void ResetProgress()
+    {
+        PlayerPrefs.SetInt("shots", 0);
+        
+        PlayerPrefs.SetInt("Stage2", 0);
+        PlayerPrefs.DeleteAll();
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("All game values reset");
+    }
 
         public IEnumerator loadStart()
     {

@@ -8,18 +8,10 @@ using UnityEngine.UI;
 public class PlayLevel : MonoBehaviour
 {
     public static PlayLevel instance;
-    public GameObject levelManager;
-    //public Transform  pathComplete;
-    public static bool Stage1, Stage2, Stage3, Stage4, Stage5,
-    Stage6, Stage7, Stage8, Stage9, Stage10;
-
-    public string levelToLoad;
-    private LevelManager levelManagerScript;
-    
-    public GameObject optionsScreen, loadingScreen, loadingIcon;
-
-    private string levelName = "";
-
+   
+    public GameObject optionsScreen, loadingScreen, loadingIcon, nextLevel, currentLevel;
+    public Text stageParTxt;
+    public int stagePar;
         public Text loadingText;
     // Start is called before the first frame update
     private void Awake()
@@ -30,160 +22,52 @@ public class PlayLevel : MonoBehaviour
 
      void Start()
     {
-        levelName = this.gameObject.name.ToString();
-        PlayerPrefs.SetInt(levelName, 0);
-        Debug.Log(PlayerPrefs.GetInt(levelName) + " is the stored value for " + levelName);
-        
-        
-        //Debug.Log( this.gameObject.transform.GetChild(1).GetChild(0) + " is the child object selected.");
-        levelManagerScript = levelManager.GetComponent<LevelManager>();
-
-        //Debug.Log(levelManagerScript.lvl1Playable);
-        //LevelTracker.levelBeingPlayed = gameObject.name.ToString();
-        //Debug.Log(gameObject.name);
+        stageParTxt.text = stagePar.ToString();
+        PlayerPrefs.SetInt(gameObject.name + "-par", stagePar);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if((gameObject.name == "Stage1" || gameObject.name == "Stage2") && Stage2 == true)
+        if(PlayerPrefs.GetInt(gameObject.name)  == 1)
         {
-            Debug.Log("Show Stage2 as active");
-            this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
-            if(gameObject.name == "Stage1")
-            {
+             this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
             this.gameObject.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
-            }
-        } else if (Stage2 == false && gameObject.name != "Stage1"){
-            this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(false);
-        }
-        if(Stage2 == false)
-        {
-            this.gameObject.transform.GetChild(1).GetChild(0).gameObject.SetActive(false);
-
+            showStars();
         }
     }
 
     private void OnMouseDown()
     {
         //isPlayable = true;
-        if(gameObject.name == "Stage1")
+        if(PlayerPrefs.GetInt(gameObject.name)  == 1 && PlayerPrefs.GetInt(gameObject.name + "-completed") != 1)
         {
-        if (levelManagerScript.Stage1 == true)
-        {
-        Debug.Log(gameObject.name);
-        LevelTracker.levelBeingPlayed = gameObject.name.ToString();
-        Debug.Log("Loading " + levelToLoad);
+        //Debug.Log(gameObject.name);
+        //Debug.Log(nextLevel.name + " is the next level");
+        LevelTracker.levelBeingPlayed = nextLevel.name.ToString();
+        LevelTracker.currentLevel = gameObject.name.ToString();
+        //Debug.Log("Loading level " + gameObject.name);
                 StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }    
-        } else if(gameObject.name == "Stage2")
-        {
-        if (levelManagerScript.Stage2 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
+        } else if(PlayerPrefs.GetInt(gameObject.name + "-completed") == 1) {
+            Debug.Log("Level already completed");
+            //Debug.Log("Stored pref is: " + PlayerPrefs.GetInt(gameObject.name));
         }  
-            
-        } else if(gameObject.name == "Stage3")
-        {
-        if (levelManagerScript.Stage3 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        } else if(gameObject.name == "Stage4")
-        {
-        if (levelManagerScript.Stage4 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage5")
-        {
-        if (levelManagerScript.Stage5 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage6")
-        {
-        if (levelManagerScript.Stage6 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage7")
-        {
-        if (levelManagerScript.Stage7 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage8")
-        {
-        if (levelManagerScript.Stage8 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage9")
-        {
-        if (levelManagerScript.Stage9 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }else if(gameObject.name == "Stage10")
-        {
-        if (levelManagerScript.Stage10 == true)
-        {
-        Debug.Log(gameObject.name);
-        Debug.Log("Loading " + levelToLoad);
-                StartCoroutine(loadLevel());
-        } else {
-            Debug.Log(gameObject.name + " is locked, play to unlock");
-        }  
-            
-        }
+        
 
     }
 
-    private void OnMouseUp()
+    public void showStars()
     {
-
+        if (PlayerPrefs.GetInt(gameObject.name + "-shots") <= stagePar && PlayerPrefs.GetInt(gameObject.name + "-shots") != 0)
+        {
+        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+        }  else if (PlayerPrefs.GetInt(gameObject.name + "-shots") == (stagePar + 1))
+        {
+        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+        } else if (PlayerPrefs.GetInt(gameObject.name + "-shots") == (stagePar + 2))
+        {
+        this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+        }
     }
 
         public IEnumerator loadLevel()
@@ -191,7 +75,7 @@ public class PlayLevel : MonoBehaviour
         //ScoreTracker.scoreTracker.SetActive(false);
         loadingScreen.SetActive(true);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelToLoad);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameObject.name);
 
         asyncLoad.allowSceneActivation = false;
 
