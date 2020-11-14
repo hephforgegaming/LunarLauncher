@@ -2162,6 +2162,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par1
+      value: 
+      objectReference: {fileID: 1653982141}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par3
+      value: 
+      objectReference: {fileID: 1802420112}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par2
+      value: 
+      objectReference: {fileID: 469736742}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par4
+      value: 
+      objectReference: {fileID: 595138947}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par5
+      value: 
+      objectReference: {fileID: 293034198}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par6
+      value: 
+      objectReference: {fileID: 792345766}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par7
+      value: 
+      objectReference: {fileID: 517825506}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par9
+      value: 
+      objectReference: {fileID: 482595012}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par8
+      value: 
+      objectReference: {fileID: 259941245}
+    - target: {fileID: 4807240262953712123, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
+      propertyPath: par10
+      value: 
+      objectReference: {fileID: 1160496308}
     - target: {fileID: 4807240262953712124, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

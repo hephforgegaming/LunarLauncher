@@ -13,6 +13,7 @@ public class PlayLevel : MonoBehaviour
     public Text stageParTxt;
     public int stagePar;
         public Text loadingText;
+        private bool isLoading;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -22,7 +23,7 @@ public class PlayLevel : MonoBehaviour
 
      void Start()
     {
-        stageParTxt.text = stagePar.ToString();
+        //stageParTxt.text = stagePar.ToString();
         PlayerPrefs.SetInt(gameObject.name + "-par", stagePar);
     }
 
@@ -39,6 +40,8 @@ public class PlayLevel : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if (isLoading == false)
+        {
         //isPlayable = true;
         if(PlayerPrefs.GetInt(gameObject.name)  == 1 && PlayerPrefs.GetInt(gameObject.name + "-completed") != 1)
         {
@@ -53,7 +56,7 @@ public class PlayLevel : MonoBehaviour
             //Debug.Log("Stored pref is: " + PlayerPrefs.GetInt(gameObject.name));
         }  
         
-
+        }
     }
 
     public void showStars()
@@ -74,6 +77,7 @@ public class PlayLevel : MonoBehaviour
     {
         //ScoreTracker.scoreTracker.SetActive(false);
         loadingScreen.SetActive(true);
+        isLoading = true;
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameObject.name);
 

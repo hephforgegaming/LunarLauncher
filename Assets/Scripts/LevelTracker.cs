@@ -15,7 +15,7 @@ public class LevelTracker : MonoBehaviour
     public static LevelTracker instance;
     public TextMeshProUGUI shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
      // Start is called before the first frame update
-
+public GameObject highScoreText;
         public List<GameObject> enemies = new List<GameObject>();
 
         public bool openWhenEnemiesCleared;
@@ -37,7 +37,7 @@ public class LevelTracker : MonoBehaviour
 
     void Start()
     {
-
+        Debug.Log(currentLevel + " is being played");
         Time.timeScale = 0f;
         bestShots = currentLevel + "-shots";
         levelCompleted = currentLevel + "-completed";
@@ -50,7 +50,7 @@ public class LevelTracker : MonoBehaviour
         shotsFired = 0;
         bestShot = PlayerPrefs.GetInt(bestShots);
         Debug.Log(PlayerPrefs.GetInt(bestShots) + " is you best score for this level");
-        bestScore.text = PlayerPrefs.GetInt(bestShots).ToString();
+        //bestScore.text = PlayerPrefs.GetInt(bestShots).ToString();
 
     }
 
@@ -72,10 +72,12 @@ public class LevelTracker : MonoBehaviour
                 }
             
 
-            if(enemies.Count == 0)
+            if(enemies.Count == 0 && currentLevel != "Stage10")
             {
                 //Debug.Log("Level Cleared!");
                 LevelComplete();            
+            } else if(enemies.Count == 0 && currentLevel == "Stage10"){
+                gameEnd();
             }
         }
 
@@ -93,6 +95,7 @@ public class LevelTracker : MonoBehaviour
 
         public void LevelComplete()
     {
+        Debug.Log("Level Complete Function");
         //Debug.Log(levelBeingPlayed + " is the next level");
         finalShotsFired.text = shotsFired.ToString();
         finalEnemiesKilled.text = enemiesKilled.ToString();
@@ -105,19 +108,24 @@ public class LevelTracker : MonoBehaviour
             Debug.Log(shotTotal);
             PlayerPrefs.SetInt(bestShots, shotsFired);
             PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") + shotsFired);
-        } else if (shotsFired < PlayerPrefs.GetInt(bestShots))
-        {
-            Debug.Log(shotTotal);
-            PlayerPrefs.SetInt(bestShots, shotsFired);
-            PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") - bestShot + shotsFired);
-        }
+        } 
+    }
 
-        if(currentLevel == "Stage10")
-        {
-            Debug.Log("This is the last level");
-            PlayerPrefs.SetInt("HighScore",PlayerPrefs.GetInt("shots"));
-            Debug.Log("High Score is: " + PlayerPrefs.GetInt("HighScore"));
+    public void gameEnd()
+    {
+        int currentHighScore =  PlayerPrefs.GetInt("HighScore");
+        Debug.Log("Game End Function");
+        //Debug.Log(levelBeingPlayed + " is the next level");
+        finalScore.SetActive(true);
+        PlayerPrefs.SetInt(levelBeingPlayed, 1);
+        PlayerPrefs.SetInt(levelCompleted, 1);
+        PlayerPrefs.SetInt(bestShots, shotsFired);
+        PlayerPrefs.SetInt("shots",PlayerPrefs.GetInt("shots") + shotsFired);
+        PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("shots"));       
 
+        if(PlayerPrefs.GetInt("HighScore") < currentHighScore)
+        {
+            highScoreText.SetActive(true);
         }
     
     }

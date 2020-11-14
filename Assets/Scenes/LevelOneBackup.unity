@@ -953,7 +953,6 @@ MonoBehaviour:
   levelCompleteScreen: {fileID: 876141330}
   levelStartScreen: {fileID: 363352995}
   scoreTracker: {fileID: 1684011751}
-  finalScore: {fileID: 0}
   shotsCount: {fileID: 1437847168}
   enemyCount: {fileID: 242327741}
   finalShotGoal: {fileID: 229157754}
@@ -962,7 +961,6 @@ MonoBehaviour:
   startShotGoal: {fileID: 1408659316}
   startEnemyCount: {fileID: 243246608}
   totalShots: {fileID: 0}
-  bestScore: {fileID: 0}
   enemies:
   - {fileID: 1112967318}
   openWhenEnemiesCleared: 0
@@ -4480,8 +4478,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3347ee31a3c4c6747896f701071b062b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Level1: 0
-  Level2: 0
+  Stage1: 0
+  Stage2: 0
+  Stage3: 0
+  Stage4: 0
+  Stage5: 0
+  Stage6: 0
+  Stage7: 0
+  Stage8: 0
+  Stage9: 0
+  Stage10: 0
 --- !u!1 &1539366884
 GameObject:
   m_ObjectHideFlags: 0

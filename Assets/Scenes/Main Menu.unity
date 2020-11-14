@@ -728,6 +728,7 @@ MonoBehaviour:
   optionsScreen: {fileID: 1856173222}
   loadingScreen: {fileID: 1502207819}
   loadingIcon: {fileID: 887589689}
+  finalScore: {fileID: 1856173222}
   loadingText: {fileID: 222049031}
 --- !u!1 &1320349002
 GameObject:
