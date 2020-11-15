@@ -42,9 +42,10 @@ public class Ball : MonoBehaviour
     {
         theBall.isKinematic = false;
         isPressed = false;
-        LevelTracker.ShotCounter();
+
         if(startScreen.activeSelf == false)
-        {
+        {  
+                    LevelTracker.ShotCounter();
                     StartCoroutine(ReleaseBall());
         }
 
