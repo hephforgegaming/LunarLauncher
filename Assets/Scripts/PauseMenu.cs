@@ -64,9 +64,6 @@ public class PauseMenu : MonoBehaviour
 
     public void QUitToMain()
     {
-        pauseScreen.SetActive(false);
-        //SceneManager.LoadScene(mainMenuScene);
-        finalScore.SetActive(false);
         //Time.timeScale = 1f;
         StartCoroutine(loadMain());
     }
