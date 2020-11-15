@@ -4520,6 +4520,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   optionsScreen: {fileID: 1862082990}
   pauseScreen: {fileID: 1290096357}
+  finalScore: {fileID: 1864622168}
   loadingScreen: {fileID: 1506325398}
   loadingIcon: {fileID: 609968637}
   mainMenuScene: Main Menu

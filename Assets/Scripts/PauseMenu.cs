@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PauseMenu : MonoBehaviour
 {
 
-    public GameObject optionsScreen, pauseScreen, loadingScreen, loadingIcon;
+    public GameObject optionsScreen, pauseScreen, finalScore, loadingScreen, loadingIcon;
     public string mainMenuScene, worldMapScene;
 
     public Text loadingText;
@@ -64,11 +64,8 @@ public class PauseMenu : MonoBehaviour
 
     public void QUitToMain()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(mainMenuScene);
-
         //Time.timeScale = 1f;
-        //StartCoroutine(loadMain());
+        StartCoroutine(loadMain());
     }
 
     public IEnumerator loadMain()
