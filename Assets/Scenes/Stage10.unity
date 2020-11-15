@@ -336,6 +336,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1070140171}
+  startScreen: {fileID: 363352995}
 --- !u!231 &42014639
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2000,6 +2001,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1837147269}
+  startScreen: {fileID: 363352995}
 --- !u!231 &360807645
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2508,7 +2510,7 @@ PrefabInstance:
     - target: {fileID: 3095454606017383919, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1186036394}
+      objectReference: {fileID: 892275507}
     - target: {fileID: 3095454606017383919, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Colors.m_NormalColor.r
       value: 0.7264151
@@ -2531,7 +2533,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3095454606017383919, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OptionsMenu, Assembly-CSharp
+      value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3095454606017383919, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -3478,6 +3480,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 850365589}
+  startScreen: {fileID: 363352995}
 --- !u!231 &655353199
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4122,6 +4125,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1898698468}
+  startScreen: {fileID: 363352995}
 --- !u!231 &850365592
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4791,6 +4795,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 0}
+  startScreen: {fileID: 363352995}
 --- !u!231 &927483207
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5265,6 +5270,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1584666163}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1070140174
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5975,17 +5981,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78ab013540a5ac74d901a05748c78b80, type: 3}
---- !u!114 &1186036394 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6306239214065161975, guid: 78ab013540a5ac74d901a05748c78b80, type: 3}
-  m_PrefabInstance: {fileID: 1186036393}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862082990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86fbbb87920a9734f98e56498f1c90eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1194912979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7678,6 +7673,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1781244913}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1584666166
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -8404,6 +8400,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 655353196}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1781244916
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -8787,6 +8784,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 42014636}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1837147271
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -9269,6 +9267,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 927483204}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1898698471
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -10030,6 +10029,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 360807643}
+  startScreen: {fileID: 363352995}
 --- !u!1001 &2132841250
 PrefabInstance:
   m_ObjectHideFlags: 0
