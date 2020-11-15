@@ -257,6 +257,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1070140171}
+  startScreen: {fileID: 363352995}
 --- !u!231 &42014639
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -963,6 +964,7 @@ MonoBehaviour:
   startEnemyCount: {fileID: 243246608}
   totalShots: {fileID: 0}
   bestScore: {fileID: 0}
+  highScoreText: {fileID: 0}
   enemies:
   - {fileID: 1112967318}
   openWhenEnemiesCleared: 0
@@ -1005,6 +1007,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1837147269}
+  startScreen: {fileID: 363352995}
 --- !u!231 &360807645
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1748,6 +1751,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 850365589}
+  startScreen: {fileID: 363352995}
 --- !u!231 &655353199
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2313,6 +2317,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1898698468}
+  startScreen: {fileID: 363352995}
 --- !u!231 &850365592
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2689,6 +2694,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 0}
+  startScreen: {fileID: 363352995}
 --- !u!231 &927483207
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2854,6 +2860,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1584666163}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1070140174
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -4672,6 +4679,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 1781244913}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1584666166
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5096,6 +5104,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 655353196}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1781244916
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5242,6 +5251,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 42014636}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1837147271
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5568,6 +5578,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 927483204}
+  startScreen: {fileID: 363352995}
 --- !u!231 &1898698471
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -5975,6 +5986,7 @@ MonoBehaviour:
   releaseTime: 0.1
   maxDistance: 2
   nextBall: {fileID: 360807643}
+  startScreen: {fileID: 363352995}
 --- !u!1001 &2132841250
 PrefabInstance:
   m_ObjectHideFlags: 0
