@@ -9,7 +9,7 @@ public class PlayLevel : MonoBehaviour
 {
     public static PlayLevel instance;
    
-    public GameObject optionsScreen, loadingScreen, loadingIcon, nextLevel, currentLevel;
+    public GameObject gameComplete, optionsScreen, loadingScreen, loadingIcon, nextLevel, currentLevel;
     public Text stageParTxt;
     public int stagePar;
         public Text loadingText;
