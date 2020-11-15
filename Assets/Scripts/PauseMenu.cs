@@ -64,11 +64,11 @@ public class PauseMenu : MonoBehaviour
 
     public void QUitToMain()
     {
-        pauseScreen.SetActive(false);
-        //SceneManager.LoadScene(mainMenuScene);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuScene);
 
         //Time.timeScale = 1f;
-        StartCoroutine(loadMain());
+        //StartCoroutine(loadMain());
     }
 
     public IEnumerator loadMain()
