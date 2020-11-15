@@ -7,7 +7,7 @@ using TMPro;
 public class LevelTracker : MonoBehaviour
 {
     public LevelManager unlockLevel;
-    public static string levelBeingPlayed, currentLevel, bestShots, levelCompleted;
+    public static string gameComplete, levelBeingPlayed, currentLevel, bestShots, levelCompleted;
 
     //private LevelManager levelManagerScript;
 
