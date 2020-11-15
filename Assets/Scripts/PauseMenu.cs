@@ -71,6 +71,7 @@ public class PauseMenu : MonoBehaviour
     public IEnumerator loadMain()
     {
         loadingScreen.SetActive(true);
+        finalScore.SetActive(false);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuScene);
 
