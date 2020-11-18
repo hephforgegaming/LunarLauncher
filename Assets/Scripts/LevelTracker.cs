@@ -13,7 +13,7 @@ public class LevelTracker : MonoBehaviour
 
     public GameObject levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
     public static LevelTracker instance;
-    public TextMeshProUGUI shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
+    public TextMeshProUGUI levelTitle, shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
      // Start is called before the first frame update
 public GameObject highScoreText;
         public List<GameObject> enemies = new List<GameObject>();
@@ -38,6 +38,7 @@ public GameObject highScoreText;
     void Start()
     {
         Debug.Log(currentLevel + " is being played");
+        //levelTitle.text = currentLevel.ToString();
         Time.timeScale = 0f;
         bestShots = currentLevel + "-shots";
         levelCompleted = currentLevel + "-completed";

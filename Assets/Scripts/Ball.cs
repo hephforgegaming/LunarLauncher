@@ -44,7 +44,8 @@ public class Ball : MonoBehaviour
         isPressed = false;
 
         if(startScreen.activeSelf == false)
-        {  
+        {
+                    GetComponent<AudioSource>().Play();  
                     LevelTracker.ShotCounter();
                     StartCoroutine(ReleaseBall());
         }
