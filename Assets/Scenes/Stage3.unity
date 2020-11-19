@@ -5052,6 +5052,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1 &1584666163
 GameObject:
@@ -5091,6 +5092,8 @@ Transform:
 --- !u!114 &1584666165
 MonoBehaviour:
 =======
+=======
+>>>>>>> parent of 8aab370... Merge pull request #10 from neoskedar/NewLevels
 --- !u!1001 &1609696915
 PrefabInstance:
 >>>>>>> parent of 8aab370... Merge pull request #10 from neoskedar/NewLevels
