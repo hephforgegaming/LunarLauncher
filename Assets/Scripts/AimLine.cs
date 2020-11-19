@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Ball : MonoBehaviour
+
+
+public class AimLine : MonoBehaviour
 {
 
     public Rigidbody2D theBall, theHook;
@@ -13,11 +15,20 @@ public class Ball : MonoBehaviour
     public GameObject nextBall, startScreen;
     // Start is called before the first frame update
 
+    public GameObject trajectoryDot;
+    private GameObject[] trajectoryDots;
+    public int number;
+        private Vector3 startPos;
+    private Vector3 endPos;
+    public Vector3 initPos;
+    private Rigidbody2D rigidbody;
+    private Vector3 forceAtPlayer;
+    public float forceFactor; 
 
-    
+
     void Start()
     {
-
+                trajectoryDots = new GameObject[number];
     }
 
     // Update is called once per frame
@@ -33,15 +44,38 @@ public class Ball : MonoBehaviour
             theBall.position = mousePos;
             }
         }
+
+            
+        
+
+        
     }
 
     private void OnMouseDown()
     {
         isPressed = true;
         theBall.isKinematic = true;
+                    startPos = gameObject.transform.position;
+            for (int i = 0; i < number; i++)
+            {
+                trajectoryDots[i] = Instantiate(trajectoryDot, gameObject.transform);
+            }
 
     }
 
+private void OnMouseDrag()
+    {
+
+            endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
+            //gameObject.transform.position = endPos;
+            forceAtPlayer = endPos - startPos;
+            for (int i = 0; i < number; i++)
+            {
+                trajectoryDots[i].transform.position = calculatePosition(i * 0.1f);
+            }
+        
+        
+    }
     private void OnMouseUp()
     {
         theBall.isKinematic = false;
@@ -49,6 +83,10 @@ public class Ball : MonoBehaviour
 
         if(startScreen.activeSelf == false)
         {
+        for (int i = 0; i < number; i++)
+           {
+                Destroy(trajectoryDots[i]);
+           }
                     GetComponent<AudioSource>().Play();  
                     LevelTracker.ShotCounter();
                     StartCoroutine(ReleaseBall());
@@ -76,4 +114,11 @@ public class Ball : MonoBehaviour
             LevelTracker.shotsFired = 0;
         }
     }
+
+        private Vector2 calculatePosition(float elapsedTime) {
+        return new Vector2(endPos.x, endPos.y) + //X0
+                new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor) * elapsedTime + //ut
+                0.5f * Physics2D.gravity * elapsedTime * elapsedTime ;
+    }
 }
+

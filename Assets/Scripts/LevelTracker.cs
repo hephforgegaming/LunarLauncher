@@ -11,7 +11,7 @@ public class LevelTracker : MonoBehaviour
 
     //private LevelManager levelManagerScript;
 
-    public GameObject levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
+    public GameObject loadBall, rockLauncher, levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
     public static LevelTracker instance;
     public TextMeshProUGUI levelTitle, shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
      // Start is called before the first frame update
@@ -37,6 +37,7 @@ public GameObject highScoreText;
 
     void Start()
     {
+        loadBall.SetActive(true);
         Debug.Log(currentLevel + " is being played");
         //levelTitle.text = currentLevel.ToString();
         Time.timeScale = 0f;
@@ -58,6 +59,11 @@ public GameObject highScoreText;
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+                    loadBall.SetActive(false);
+            rockLauncher.SetActive(true);
+        }
 
             for(int i = 0; i < enemies.Count; i++)
             {
