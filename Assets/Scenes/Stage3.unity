@@ -5051,6 +5051,7 @@ CanvasRenderer:
   m_GameObject: {fileID: 1539366884}
   m_CullTransparentMesh: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!1 &1584666163
 GameObject:
@@ -5089,6 +5090,10 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1584666165
 MonoBehaviour:
+=======
+--- !u!1001 &1609696915
+PrefabInstance:
+>>>>>>> parent of 8aab370... Merge pull request #10 from neoskedar/NewLevels
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
