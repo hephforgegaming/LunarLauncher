@@ -2816,6 +2816,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< HEAD
     - target: {fileID: 63071329869901189, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
       propertyPath: m_Name
       value: Resume
@@ -3040,6 +3041,8 @@ PrefabInstance:
       propertyPath: finalScore
       value: 
       objectReference: {fileID: 2125646231}
+=======
+>>>>>>> parent of 0ffd61f... Merge pull request #5 from neoskedar/Fixes
     - target: {fileID: 4807240262953712001, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -3166,10 +3169,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807240262953712124, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4807240264410908947, guid: 1c6d4ae9f6ea0a34b9fc96b236cc555e, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
