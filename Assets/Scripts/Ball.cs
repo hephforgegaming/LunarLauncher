@@ -9,7 +9,7 @@ public class Ball : MonoBehaviour
     private bool isPressed = false;
     public float releaseTime = 0.1f;
     public float maxDistance = 2f;
-    public static bool canLaunch;    public GameObject nextBall, startScreen;
+    public GameObject nextBall;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +42,7 @@ public class Ball : MonoBehaviour
     {
         theBall.isKinematic = false;
         isPressed = false;
+<<<<<<< HEAD
 
         if(startScreen.activeSelf == false)
         {
@@ -49,7 +50,11 @@ public class Ball : MonoBehaviour
                     LevelTracker.ShotCounter();
                     StartCoroutine(ReleaseBall());
         }
+=======
+        LevelTracker.ShotCounter();
+>>>>>>> parent of 0ffd61f... Merge pull request #5 from neoskedar/Fixes
 
+        StartCoroutine(ReleaseBall());
     }
 
 

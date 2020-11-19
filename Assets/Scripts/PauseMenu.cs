@@ -64,6 +64,11 @@ public class PauseMenu : MonoBehaviour
 
     public void QUitToMain()
     {
+<<<<<<< HEAD
+=======
+        //SceneManager.LoadScene(mainMenuScene);
+        finalScore.SetActive(false);
+>>>>>>> parent of 0ffd61f... Merge pull request #5 from neoskedar/Fixes
         //Time.timeScale = 1f;
         StartCoroutine(loadMain());
     }
