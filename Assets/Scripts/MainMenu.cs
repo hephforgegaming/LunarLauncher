@@ -65,11 +65,11 @@ public class MainMenu : MonoBehaviour
 
         public IEnumerator loadStart()
     {
-        loadingScreen.SetActive(true);
+        //loadingScreen.SetActive(true);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(firstLevel);
+        SceneManager.LoadSceneAsync(firstLevel);
 
-        asyncLoad.allowSceneActivation = false;
+        /*asyncLoad.allowSceneActivation = false;
 
         while(!asyncLoad.isDone)
         {
@@ -84,7 +84,8 @@ public class MainMenu : MonoBehaviour
                 }
             }
 
-            yield return null;
-        }
+            
+        }*/
+        yield return null;
     }
 }

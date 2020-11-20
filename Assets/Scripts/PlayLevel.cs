@@ -79,11 +79,11 @@ public class PlayLevel : MonoBehaviour
         loadingScreen.SetActive(true);
         isLoading = true;
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameObject.name);
+        SceneManager.LoadSceneAsync(gameObject.name);
 
-        asyncLoad.allowSceneActivation = false;
+        //asyncLoad.allowSceneActivation = false;
 
-        while(!asyncLoad.isDone)
+        /*while(!asyncLoad.isDone)
         {
             if(asyncLoad.progress >= .9f)
             {
@@ -97,7 +97,9 @@ public class PlayLevel : MonoBehaviour
             }
 
             yield return null;
-        }
+        }*/
+    yield return null;
     }
+
 
 }

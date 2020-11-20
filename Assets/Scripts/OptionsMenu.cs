@@ -155,6 +155,13 @@ public class OptionsMenu : MonoBehaviour
         sfxLoop.Play();
     }
 
+    public void ResetHighScore()
+    {
+        PlayerPrefs.SetInt("HighScore", 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Debug.Log("HighScore reset");
+    }
+
     public void StopSFXLoop()
     {
         sfxLoop.Stop();

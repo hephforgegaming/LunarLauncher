@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9042187756544920685}
   - component: {fileID: 9042187756544920686}
   - component: {fileID: 9042187756544920687}
+  - component: {fileID: 6000193595897227664}
   m_Layer: 8
   m_Name: RockLaunch
   m_TagString: Untagged
@@ -146,7 +147,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initPos: {x: 0, y: -3, z: 0}
   forceFactor: 8
+  reloadBall: {fileID: 0}
   trajectoryDot: {fileID: 1152180298276607188, guid: ed33fd76ed649e046a6540761b0b9134, type: 3}
   nextBall: {fileID: 0}
   startScreen: {fileID: 0}
   number: 4
+--- !u!114 &6000193595897227664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042187756544920672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7087709547cc86c4fa3909a433439ba9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 9042187756544920686}

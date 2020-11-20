@@ -10,7 +10,7 @@ public class LevelTracker : MonoBehaviour
     public static string gameComplete, levelBeingPlayed, currentLevel, bestShots, levelCompleted;
 
     //private LevelManager levelManagerScript;
-
+    public static int enemyCounter;
     public GameObject loadBall, rockLauncher, levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
     public static LevelTracker instance;
     public TextMeshProUGUI levelTitle, shotsCount, enemyCount, finalShotGoal, finalShotsFired, finalEnemiesKilled, startShotGoal, startEnemyCount, totalShots, bestScore; 
@@ -90,6 +90,7 @@ public GameObject highScoreText;
 
         shotsCount.text = shotsFired.ToString();
         enemyCount.text = enemiesLeft.ToString();
+        enemyCounter = enemiesLeft;
     }
 
     public static void ShotCounter()
