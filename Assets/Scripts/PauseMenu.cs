@@ -96,11 +96,11 @@ public class PauseMenu : MonoBehaviour
 
         public IEnumerator exitLevel()
     {
-        loadingScreen.SetActive(true);
+        //loadingScreen.SetActive(true);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(worldMapScene);
+        SceneManager.LoadSceneAsync(worldMapScene);
 
-        asyncLoad.allowSceneActivation = false;
+        /*asyncLoad.allowSceneActivation = false;
 
         while(!asyncLoad.isDone)
         {
@@ -113,9 +113,9 @@ public class PauseMenu : MonoBehaviour
                     asyncLoad.allowSceneActivation = true;
                     Time.timeScale = 1f;
                 }
-            }
+            }*/
 
             yield return null;
         }
-    }
+    
 }

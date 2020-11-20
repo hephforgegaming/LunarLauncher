@@ -11,18 +11,20 @@ public class Asteroids : MonoBehaviour
 
      void Start () 
      {
-      
+        if(ObstacleController.asteroidDirection <= 5){
+        Debug.Log("Going Right");
+            theRB.velocity = transform.right * speed;
+         } else if(ObstacleController.asteroidDirection > 5) {
+             Debug.Log("Going Left");
+            theRB.velocity = -transform.right * speed;
+
+         }
  
      }
  
      void Update () 
      {
-         if(ObstacleController.asteroidDirection < 5){
-            theRB.velocity = transform.right * speed;
-         } else {
-            theRB.velocity = -transform.right * speed;
 
-         }
 
     }
 

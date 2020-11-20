@@ -21,12 +21,14 @@ public class playerScript : MonoBehaviour
     public int number;
     private bool canShoot = true;
     private bool canReload = false;
+    private bool blackHoled = false;
     
 
 
     // Start is called before the first frame update
     void Start()
     {
+        initPos = gameObject.transform.position;
         rigidbody = GetComponent<Rigidbody2D>();
         trajectoryDots = new GameObject[number];
     }
@@ -34,7 +36,7 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -7 || (transform.position.x < -6) || (transform.position.x > 11))
+        if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
             {
                 reloadBall.SetActive(true);
             } else {
@@ -58,6 +60,7 @@ public class playerScript : MonoBehaviour
         if(Input.GetMouseButton(0)) { //drag
 
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
+            Debug.Log(endPos);
             gameObject.transform.position = endPos;
             forceAtPlayer = endPos - startPos;
             for (int i = 0; i < number; i++)
@@ -73,11 +76,11 @@ public class playerScript : MonoBehaviour
             {
                 Destroy(trajectoryDots[i]);
             }
-            
+            Attaractor.beAttracted = true;
             LevelTracker.ShotCounter();
         }
         if(Input.GetKey(KeyCode.Space)) {
-            if(transform.position.y < -5 || (transform.position.x < -6) || (transform.position.x > 11))
+        if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
             {
                 canReload = true;
             } else {
@@ -88,9 +91,19 @@ public class playerScript : MonoBehaviour
             rigidbody.velocity = Vector2.zero;
              gameObject.transform.position = initPos;
              canReload = false;
+             Attaractor.beAttracted = false;
+             blackHoled = false;
             }
             
         }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.tag == "Blackhole")
+        {
+            Debug.Log("Oh no! I'm stuck!!");
+            blackHoled = true;
         }
     }
 
