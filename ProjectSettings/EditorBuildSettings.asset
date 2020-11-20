@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/HephForgeSplash.unity
+    guid: 9e7103c8e1189284ab81f7e28b32f1e9
+  - enabled: 1
+    path: Assets/Scenes/GameOffSplash.unity
+    guid: ebf46a9b0cba6804fbb8431965774855
+  - enabled: 1
     path: Assets/Scenes/Main Menu.unity
     guid: 6037e603ab266ba4ea37f6a219f6c61f
   - enabled: 1
