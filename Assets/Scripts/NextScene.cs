@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextScene : MonoBehaviour
 {
     public string sceneToLoad;
-    public int timeToWait;
+    public float timeToWait;
     // Start is called before the first frame update
     void Start()
     {

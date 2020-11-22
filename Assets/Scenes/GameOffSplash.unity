@@ -646,4 +646,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: Main Menu
-  timeToWait: 3
+  timeToWait: 3.25
