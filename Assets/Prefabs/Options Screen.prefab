@@ -81,7 +81,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'SFX Volume:'
+  m_Text: 'SFX VOLUME:'
 --- !u!1 &6306239213236375439
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 300
+    m_MaxSize: 82
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -575,7 +575,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 152.9, y: 3.2}
+  m_AnchoredPosition: {x: 274.8, y: -1}
   m_SizeDelta: {x: 18.282597, y: 16.860016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6306239213380680083
@@ -694,7 +694,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 79
 --- !u!1 &6306239213594273803
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,7 +730,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 152.9, y: 3.2}
+  m_AnchoredPosition: {x: 227.2, y: 0.5}
   m_SizeDelta: {x: 18.282597, y: 16.860016}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6306239213594273796
@@ -1033,8 +1033,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 280, y: 0}
+  m_SizeDelta: {x: 110, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6306239213840738038
 MonoBehaviour:
@@ -1414,7 +1414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Resolution:'
+  m_Text: 'RESOLUTION:'
 --- !u!1 &6306239214065161979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,7 +1868,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 79
 --- !u!1 &6306239214533379735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 10
-    m_MaxSize: 300
+    m_MaxSize: 82
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2135,7 +2135,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Full Screen:'
+  m_Text: 'FULL SCREEN:'
 --- !u!1 &6306239214721730075
 GameObject:
   m_ObjectHideFlags: 0
@@ -2471,8 +2471,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 234, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 280, y: 0}
+  m_SizeDelta: {x: 110, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6306239214962611872
 MonoBehaviour:
@@ -2616,7 +2616,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Music Volume:'
+  m_Text: 'MUSIC VOLUME:'
 --- !u!1 &6306239215032979507
 GameObject:
   m_ObjectHideFlags: 0
@@ -2697,7 +2697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Master Volume:'
+  m_Text: 'MASTER VOLUME:'
 --- !u!1 &6306239215035861843
 GameObject:
   m_ObjectHideFlags: 0
@@ -2903,7 +2903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 79
 --- !u!1 &6306239215062153001
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,8 +2940,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 232, y: 0}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchoredPosition: {x: 280, y: 0}
+  m_SizeDelta: {x: 110, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6306239215062153003
 MonoBehaviour:
@@ -3260,7 +3260,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Text
-      value: Close
+      value: CLOSE
       objectReference: {fileID: 0}
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Color.b
@@ -3319,8 +3319,12 @@ PrefabInstance:
       value: Close Options
       objectReference: {fileID: 0}
     - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.y
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8500570919840116619, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Pivot.x
@@ -3807,7 +3811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Text
-      value: Reset Progress
+      value: RESET PROGRESS
       objectReference: {fileID: 0}
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Color.b
@@ -3909,6 +3913,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 25821d49a36a3e245aa6d4ccba18eb26, type: 3}
+    - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8500570919840116619, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.49999994
@@ -4009,7 +4021,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Text
-      value: Apply
+      value: APPLY
       objectReference: {fileID: 0}
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Color.b
@@ -4068,8 +4080,12 @@ PrefabInstance:
       value: Apply Graphics
       objectReference: {fileID: 0}
     - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
-      propertyPath: m_AnchoredPosition.y
+      propertyPath: m_SizeDelta.y
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8267644557090936166, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 8500570919840116619, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Pivot.x
