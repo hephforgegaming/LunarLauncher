@@ -220,7 +220,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  - {fileID: 2347745235729433780, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -264,8 +264,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
+  m_sharedMaterial: {fileID: 2347745235729433780, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -389,7 +389,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  - {fileID: 2347745235729433780, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -433,8 +433,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: LV.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
+  m_sharedMaterial: {fileID: 2347745235729433780, guid: cf99654ad78bae048a2dce0f829c8dda, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -861,7 +861,7 @@ Transform:
   m_GameObject: {fileID: 5000124192790314522}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.68468803, y: 0.68468803, z: 0.85586}
   m_Children:
   - {fileID: 8926307299218914089}
   - {fileID: 4009381960576788705}
@@ -896,14 +896,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d8648227fe42d4e91876221728bbd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameComplete: {fileID: 0}
+  gameComplete: {fileID: 5848214961296786964}
   optionsScreen: {fileID: 0}
   loadingScreen: {fileID: 0}
   loadingIcon: {fileID: 0}
   nextLevel: {fileID: 0}
-  currentLevel: {fileID: 0}
+  currentLevel: {fileID: 1050599457859925460}
   stageParTxt: {fileID: 0}
-  stagePar: 0
+  stagePar: 5
   loadingText: {fileID: 0}
 --- !u!58 &354936391
 CircleCollider2D:
@@ -915,7 +915,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -947,7 +947,7 @@ Transform:
   m_GameObject: {fileID: 5848214961296786964}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34, y: 0.34, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8926307299218914089}
   m_RootOrder: 0
@@ -992,7 +992,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d37f70cfea403624ea4ed34f2eab6f16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9f4691c574ef8f49bdb6db970096b58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1246,7 +1246,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b9f4691c574ef8f49bdb6db970096b58, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d37f70cfea403624ea4ed34f2eab6f16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
