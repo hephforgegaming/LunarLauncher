@@ -15,6 +15,8 @@ public class playerScript : MonoBehaviour
     public float forceFactor;
     public GameObject  reloadBall;  
     public float distance = 2f;
+    
+    public Sprite[] rockSkins;
 
     public GameObject trajectoryDot, nextBall, startScreen;
 
@@ -24,6 +26,7 @@ public class playerScript : MonoBehaviour
     private bool launchable = false;
     private bool canReload = false;
     private bool blackHoled = false;
+    public SpriteRenderer spriteRenderer;
          Ray ray;
      RaycastHit hit;
 
@@ -40,7 +43,7 @@ public class playerScript : MonoBehaviour
     void Update()
     {
 
-
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
             {
                 reloadBall.SetActive(true);
@@ -102,6 +105,8 @@ public class playerScript : MonoBehaviour
                 canReload = false;
             }
             if(canReload == true){
+            var skin = Random.Range(0,3);
+            spriteRenderer.sprite = rockSkins[skin];
             rigidbody.gravityScale = 0;
             rigidbody.velocity = Vector2.zero;
              gameObject.transform.position = initPos;
