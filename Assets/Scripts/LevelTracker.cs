@@ -44,7 +44,7 @@ public GameObject highScoreText;
         Debug.Log(stageName);
         loadBall.SetActive(true);
         Debug.Log(currentLevel + " is being played");
-        //levelTitle.text = currentLevel.ToString();
+        levelTitle.text = stageName.ToString();
         Time.timeScale = 0f;
         bestShots = currentLevel + "-shots";
         levelCompleted = currentLevel + "-completed";
