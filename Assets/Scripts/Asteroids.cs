@@ -14,6 +14,7 @@ public class Asteroids : MonoBehaviour
      void Start () 
      {
         if(ObstacleController.asteroidDirection <= 5){
+             transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);
         //Debug.Log("Going Right");
             theRB.velocity = transform.right * speed;
          } else if(ObstacleController.asteroidDirection > 5) {
