@@ -21,7 +21,6 @@ public class AimLine : MonoBehaviour
         private Vector3 startPos;
     private Vector3 endPos;
     public Vector3 initPos;
-    private Rigidbody2D rigidbody;
     private Vector3 forceAtPlayer;
     public float forceFactor; 
 

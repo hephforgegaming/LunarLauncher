@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelTracker : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public GameObject highScoreText;
         private int enemiesKilled = 0;
         public int shotGoal;
         private int shotTotal, bestShot;
+        private string stageName;
 
 
         //public RoomActivator theRoom;
@@ -37,6 +39,9 @@ public GameObject highScoreText;
 
     void Start()
     {
+        var m_scene = SceneManager.GetActiveScene();
+        stageName = m_scene.name;
+        Debug.Log(stageName);
         loadBall.SetActive(true);
         Debug.Log(currentLevel + " is being played");
         //levelTitle.text = currentLevel.ToString();
@@ -79,11 +84,12 @@ public GameObject highScoreText;
                 }
             
 
-            if(enemies.Count == 0 && currentLevel != "Stage10")
+            if(enemies.Count == 0 && stageName != "Stage10")
             {
-                //Debug.Log("Level Cleared!");
+                Debug.Log("Level Cleared!");
                 LevelComplete();            
-            } else if(enemies.Count == 0 && currentLevel == "Stage10"){
+            } else if(enemies.Count == 0 && stageName == "Stage10" ){
+                Debug.Log("Game Over!");
                 gameEnd();
             }
         }
