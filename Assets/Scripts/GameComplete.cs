@@ -44,8 +44,9 @@ public class GameComplete : MonoBehaviour
         
         //PlayerPrefs.SetInt("Stage2", 0);
         //PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Debug.Log("All game values reset");
+        StartCoroutine(loadMain());
+
     }
 
 
@@ -54,7 +55,7 @@ public class GameComplete : MonoBehaviour
 
         loadingScreen.SetActive(true);
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuScene);
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(worldMapScene);
 
         asyncLoad.allowSceneActivation = false;
 
