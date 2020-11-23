@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca88ed4d31158d345bb2e0db6027df16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameComplete: {fileID: 2064262433}
+  gameComplete: {fileID: 1260931165}
   loadingScreen: {fileID: 18528857}
   loadingIcon: {fileID: 361616758}
   mainMenuScene: Main Menu
@@ -303,6 +303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1260931165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 591397093877029850, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+  m_PrefabInstance: {fileID: 1810501889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1365163897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +580,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1795285212046709913, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1111722553}
+    - target: {fileID: 1795285212046709913, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QUitToMain
+      objectReference: {fileID: 0}
     - target: {fileID: 1974114388762709116, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -795,18 +808,30 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MainMenu, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4608913696140380600, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1111722558}
+    - target: {fileID: 4608913696140380600, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResetProgress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4608913696140380600, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameComplete, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4761082910492703220, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: finalScore
       value: 
-      objectReference: {fileID: 2064262433}
+      objectReference: {fileID: 1260931165}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: finalScore
       value: 
-      objectReference: {fileID: 2064262433}
+      objectReference: {fileID: 1260931165}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: highScoreText
       value: 
-      objectReference: {fileID: 1941593954}
+      objectReference: {fileID: 0}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: enemies.Array.size
       value: 1
@@ -1096,15 +1121,5 @@ PrefabInstance:
 --- !u!4 &1810501890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 192032153867638314, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
-  m_PrefabInstance: {fileID: 1810501889}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1941593954 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7774114777819131398, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
-  m_PrefabInstance: {fileID: 1810501889}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2064262433 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8152119798911280393, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
   m_PrefabInstance: {fileID: 1810501889}
   m_PrefabAsset: {fileID: 0}
