@@ -2980,6 +2980,7 @@ MonoBehaviour:
   loadingScreen: {fileID: 1151265700}
   loadingIcon: {fileID: 1306393333}
   finalScore: {fileID: 2125646231}
+  creditsScreen: {fileID: 0}
   loadingText: {fileID: 1864344216}
 --- !u!114 &1777775978
 MonoBehaviour:
