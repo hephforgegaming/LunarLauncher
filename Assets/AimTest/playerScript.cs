@@ -14,6 +14,7 @@ public class playerScript : MonoBehaviour
     private Vector3 forceAtPlayer;
     public float forceFactor;
     public GameObject  reloadBall;  
+    public float distance = 2f;
 
     public GameObject trajectoryDot, nextBall, startScreen;
 
@@ -60,16 +61,24 @@ public class playerScript : MonoBehaviour
         if(Input.GetMouseButton(0)) { //drag
 
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
-            Debug.Log(endPos);
+            //Debug.Log(endPos);
+            if (Vector3.Distance(endPos, startPos) > distance)
+            {
+                gameObject.transform.position = startPos + (endPos - startPos).normalized * distance;
+                forceAtPlayer = endPos - startPos;
+            } else {
             gameObject.transform.position = endPos;
-            forceAtPlayer = endPos - startPos;
+                        forceAtPlayer = endPos - startPos;
+            }
+            //gameObject.transform.position = endPos;
+            //forceAtPlayer = endPos - startPos;
             for (int i = 0; i < number; i++)
             {
                 trajectoryDots[i].transform.position = calculatePosition(i * 0.1f);
             }
         }
         if(Input.GetMouseButtonUp(0)) { //leave
-            
+            GetComponent<AudioSource>().Play();  
             rigidbody.gravityScale = 1;
             rigidbody.velocity = new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor);
             for (int i = 0; i < number; i++)

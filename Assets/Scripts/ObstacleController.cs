@@ -46,7 +46,7 @@ private float time;
     private void SetRandomTime()
     {
         spawnTime = Random.Range(minTime,maxTime);
-                Debug.Log("Waiting " + spawnTime + " second to spawn asteroid");
+                //Debug.Log("Waiting " + spawnTime + " second to spawn asteroid");
 
     }
 
@@ -56,11 +56,11 @@ private float time;
         {
         if(asteroidDirection <= 5)
         {
-            Debug.Log("Shooting Right");
+            //Debug.Log("Shooting Right");
         spawnLocation = Mathf.Round(Random.Range(-2f,5f) * 100) / 100;
         Instantiate(asteroid, new Vector2(-10,spawnLocation), Quaternion.identity);
         } else if(asteroidDirection > 5) {
-            Debug.Log("Shooting Left");
+            //Debug.Log("Shooting Left");
         spawnLocation = Mathf.Round(Random.Range(-2f,5f) * 100) / 100;
         Instantiate(asteroid, new Vector2(11,spawnLocation), Quaternion.identity);
         }
