@@ -58,7 +58,7 @@ public class playerScript : MonoBehaviour
             }
             
         }
-        if(Input.GetMouseButton(0)) { //drag
+        if(Input.GetMouseButton(0) && LevelTracker.canLoad == true) { //drag
 
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
             //Debug.Log(endPos);
@@ -77,7 +77,7 @@ public class playerScript : MonoBehaviour
                 trajectoryDots[i].transform.position = calculatePosition(i * 0.1f);
             }
         }
-        if(Input.GetMouseButtonUp(0)) { //leave
+        if(Input.GetMouseButtonUp(0) && LevelTracker.canLoad == true) { //leave
             GetComponent<AudioSource>().Play();  
             rigidbody.gravityScale = 1;
             rigidbody.velocity = new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor);

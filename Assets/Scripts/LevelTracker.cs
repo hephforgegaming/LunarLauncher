@@ -19,7 +19,7 @@ public class LevelTracker : MonoBehaviour
 public GameObject highScoreText;
         public List<GameObject> enemies = new List<GameObject>();
 
-        public bool openWhenEnemiesCleared;
+        public static bool canLoad = false;
         public static int shotsFired = 0;
         private int enemiesLeft, enemiesToKill;
         private int enemiesKilled = 0;
@@ -64,9 +64,9 @@ public GameObject highScoreText;
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && canLoad == true)
         {
-                    loadBall.SetActive(false);
+            loadBall.SetActive(false);
             rockLauncher.SetActive(true);
         }
 
@@ -87,8 +87,10 @@ public GameObject highScoreText;
             if(enemies.Count == 0 && stageName != "Stage10")
             {
                 Debug.Log("Level Cleared!");
-                LevelComplete();            
+                LevelComplete();        
+                canLoad = false;    
             } else if(enemies.Count == 0 && stageName == "Stage10" ){
+                canLoad = false;
                 Debug.Log("Game Over!");
                 gameEnd();
             }
@@ -109,6 +111,7 @@ public GameObject highScoreText;
 
         public void LevelComplete()
     {
+        canLoad = false;
         Debug.Log("Level Complete Function");
         //Debug.Log(levelBeingPlayed + " is the next level");
         finalShotsFired.text = shotsFired.ToString();
@@ -127,6 +130,7 @@ public GameObject highScoreText;
 
     public void gameEnd()
     {
+        canLoad = false;
         int currentHighScore =  PlayerPrefs.GetInt("HighScore");
         Debug.Log("Game End Function");
         //Debug.Log(levelBeingPlayed + " is the next level");
@@ -148,6 +152,7 @@ public GameObject highScoreText;
     {
         levelStartScreen.SetActive(false);
         scoreTracker.SetActive(true);
+        canLoad = true;
         Time.timeScale = 1f;
     }
 }
