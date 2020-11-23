@@ -387,7 +387,6 @@ PrefabInstance:
       propertyPath: forceFactor
       value: 5.5
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 4761082910508739018, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 725.9746
@@ -404,15 +403,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -144.76
       objectReference: {fileID: 0}
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
     - target: {fileID: 4761082910508739019, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
     - target: {fileID: 4761082910571016260, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_SizeDelta.x
       value: 79.794586
@@ -433,9 +427,6 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
