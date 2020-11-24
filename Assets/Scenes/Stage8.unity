@@ -180,7 +180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2468472853955749986, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: maxTime
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2468472853955749986, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: minTime
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2468472853955749986, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: spawnAsteroids
@@ -610,11 +614,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4277040091261389950, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.441403
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 4277040091261389950, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.9882793
+      value: 2.97
       objectReference: {fileID: 0}
     - target: {fileID: 4277040091261389950, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
       propertyPath: m_LocalPosition.z

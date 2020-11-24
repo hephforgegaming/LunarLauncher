@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionDetection : MonoBehaviour
+public class CollisionDetectionPlanet : MonoBehaviour
 {
     public string objectHit;
     private int hidden = 1;
-    private string planet;
     private SpriteRenderer sprite;
+    public GameObject rp1, rp2;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,34 +19,30 @@ public class CollisionDetection : MonoBehaviour
     {
         if(hidden == 0 )
         {
-            sprite.sortingOrder = 0;
-            //gameObject.layer = 10;
+            sprite.sortingOrder = -2;
         }else if(hidden == 1 )
         {
-            sprite.sortingOrder = 2;
-            //gameObject.layer = 9;
+            sprite.sortingOrder = 1;
         }
     }
-
-        private void OnCollisionEnter2D(Collision2D collision) {
-        GameObject otherObj = collision.gameObject;
-        //Debug.Log("Collided with: " + otherObj + " " + hidden);
-    }
+    
  
     private void OnTriggerEnter2D(Collider2D collider) {
         
         GameObject otherObj = collider.gameObject;
-        planet = collider.gameObject.tag;
 
-        if(otherObj.ToString() == "P2 (UnityEngine.GameObject)")
+        if(otherObj.ToString() == "M2 (UnityEngine.GameObject)")
         {
+            Debug.Log(otherObj + " " + gameObject.name);
             hidden = 0;
-            //Debug.Log(hidden);
+            Debug.Log(hidden);
             //Debug.Log("Hidden set to 0");
             
         }
-        if(otherObj.ToString() == "P1 (UnityEngine.GameObject)") {
+        if(otherObj.ToString() == "M1 (UnityEngine.GameObject)") {
+            Debug.Log(otherObj + " " + gameObject.name);
             hidden = 1;
+             Debug.Log(hidden);
             
         }     
          //Debug.Log(planet);
