@@ -20,11 +20,11 @@ public class CollisionDetection : MonoBehaviour
         if(hidden == 0 )
         {
             sprite.sortingOrder = 0;
-            //gameObject.layer = 10;
+            gameObject.layer = 10;
         }else if(hidden == 1 )
         {
             sprite.sortingOrder = 2;
-            //gameObject.layer = 9;
+            gameObject.layer = 9;
         }
     }
 
