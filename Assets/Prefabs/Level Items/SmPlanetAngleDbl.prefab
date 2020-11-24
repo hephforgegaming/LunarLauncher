@@ -174,7 +174,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5f86fed4f04abc14cab923f48213eecd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -270,35 +270,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
---- !u!114 &8600707272062714266
+--- !u!114 &6169183164987232076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9159727344951520903}
+  m_GameObject: {fileID: 6763119834281565859}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10405b5aea56f9e4bb83674cae45cccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objectHit: 
---- !u!114 &8600707272062714245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9159727344951520903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcad2b353c9c10744a7c90427a46f35e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 0
-  MyPath: {fileID: 8600707273102293424}
-  Speed: 5
-  MaxDistanceToGoal: 0.1
 --- !u!114 &6169183164987232079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,19 +299,6 @@ MonoBehaviour:
   MyPath: {fileID: 6169183165573042027}
   Speed: 5
   MaxDistanceToGoal: 0.1
---- !u!114 &6169183164987232076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6763119834281565859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10405b5aea56f9e4bb83674cae45cccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectHit: 
 --- !u!1 &8600707272968709158
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +444,35 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &8600707272062714245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159727344951520903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcad2b353c9c10744a7c90427a46f35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  MyPath: {fileID: 8600707273102293424}
+  Speed: 5
+  MaxDistanceToGoal: 0.1
+--- !u!114 &8600707272062714266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9159727344951520903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10405b5aea56f9e4bb83674cae45cccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHit: 
 --- !u!1001 &6169183165388162998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -562,14 +562,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccbdbfc4cb172c4bb36871c71f48820, type: 3}
---- !u!4 &2790852516955645505 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8297406177297129975, guid: 8ccbdbfc4cb172c4bb36871c71f48820, type: 3}
-  m_PrefabInstance: {fileID: 6169183165388162998}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6763119834281565859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 596228662085835029, guid: 8ccbdbfc4cb172c4bb36871c71f48820, type: 3}
+  m_PrefabInstance: {fileID: 6169183165388162998}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2790852516955645505 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8297406177297129975, guid: 8ccbdbfc4cb172c4bb36871c71f48820, type: 3}
   m_PrefabInstance: {fileID: 6169183165388162998}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8600707273058957202

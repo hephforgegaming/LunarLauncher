@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &4277040089904644588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683139111788285955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10405b5aea56f9e4bb83674cae45cccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectHit: 
+--- !u!114 &4277040089904644591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3683139111788285955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcad2b353c9c10744a7c90427a46f35e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 0
+  MyPath: {fileID: 4277040090929185227}
+  Speed: 5
+  MaxDistanceToGoal: 0.1
 --- !u!1 &4277040089819448125
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4277040089819448125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5457277, y: -2.639608, z: 11.678235}
+  m_LocalPosition: {x: 0, y: 0, z: 11.678235}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 4277040091279448175}
@@ -128,35 +157,6 @@ Transform:
   m_Father: {fileID: 4277040089819448115}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4277040089904644588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3683139111788285955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10405b5aea56f9e4bb83674cae45cccf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectHit: 
---- !u!114 &4277040089904644591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3683139111788285955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcad2b353c9c10744a7c90427a46f35e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Type: 0
-  MyPath: {fileID: 4277040090929185227}
-  Speed: 5
-  MaxDistanceToGoal: 0.1
 --- !u!1 &4277040090929185077
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4277040091261389945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.3043666, y: 1.5057158, z: -11.678235}
+  m_LocalPosition: {x: 0, y: 0, z: -11.678235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4277040091314077670}
@@ -298,7 +298,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4277040091314077667}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5457277, y: -2.639608, z: 11.678235}
+  m_LocalPosition: {x: 0, y: 0, z: 11.678235}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 5223427598425008353}
@@ -345,7 +345,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5f86fed4f04abc14cab923f48213eecd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
