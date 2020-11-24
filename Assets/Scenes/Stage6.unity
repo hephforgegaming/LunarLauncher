@@ -319,6 +319,10 @@ PrefabInstance:
       propertyPath: spawnAsteroids
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: number
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: enemies.Array.size
       value: 6
