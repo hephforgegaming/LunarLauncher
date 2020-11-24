@@ -25,11 +25,11 @@ public class SunPlanetDetection : MonoBehaviour
         {
             
             sprite.sortingOrder = basePlanet.sortingOrder - 1;
-            //gameObject.layer = 10;
+            gameObject.layer = 10;
         }else if(hidden == 1 )
         {
             sprite.sortingOrder = basePlanet.sortingOrder + 1;
-            //gameObject.layer = 9;
+            gameObject.layer = 9;
         }
     }
 
