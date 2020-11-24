@@ -547,7 +547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: forceFactor
-      value: 5.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: shotGoal
