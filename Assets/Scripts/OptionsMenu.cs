@@ -180,6 +180,7 @@ public class OptionsMenu : MonoBehaviour
         //PlayerPrefs.SetInt("Stage2", 0);
         //PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale=1f;
         Debug.Log("All game values reset");
     }
 }
