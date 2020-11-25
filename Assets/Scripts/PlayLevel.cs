@@ -15,7 +15,7 @@ public class PlayLevel : MonoBehaviour
     public int stagePar;
         public Text loadingText;
         private bool isLoading;
-    public static bool canPlay;
+    public static bool canPlay = true;
     // Start is called before the first frame update
     private void Awake()
     {
