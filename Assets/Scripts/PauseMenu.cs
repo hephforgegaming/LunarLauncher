@@ -32,11 +32,13 @@ public class PauseMenu : MonoBehaviour
     {
         if(!isPaused)
         {
+            PlayLevel.canPlay = false;
             pauseScreen.SetActive(true);
             isPaused = true;
 
             Time.timeScale = 0f;
         } else {
+            PlayLevel.canPlay = true;
             pauseScreen.SetActive(false);
             isPaused = false;
 

@@ -15,6 +15,7 @@ public class PlayLevel : MonoBehaviour
     public int stagePar;
         public Text loadingText;
         private bool isLoading;
+    public static bool canPlay;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class PlayLevel : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (isLoading == false)
+        if (isLoading == false && canPlay == true)
         {
         //isPlayable = true;
         if(PlayerPrefs.GetInt(gameObject.name)  == 1 && PlayerPrefs.GetInt(gameObject.name + "-completed") != 1)
