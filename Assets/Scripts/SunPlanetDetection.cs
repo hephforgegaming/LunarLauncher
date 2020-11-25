@@ -20,16 +20,30 @@ public class SunPlanetDetection : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(rp1.ToString());
+
         if(hidden == 0 )
         {
             
             sprite.sortingOrder = basePlanet.sortingOrder - 1;
-            gameObject.layer = 10;
+            if (sprite.sortingOrder == -3)
+            {
+                gameObject.layer = 14;
+            }else{
+                            gameObject.layer = 13;
+
+            }
         }else if(hidden == 1 )
         {
+
             sprite.sortingOrder = basePlanet.sortingOrder + 1;
-            gameObject.layer = 9;
+            Debug.Log(sprite.sortingOrder);
+            if (sprite.sortingOrder == -3)
+            {
+                gameObject.layer = 14;
+            }else{
+                            gameObject.layer = 9;
+
+            }
         }
     }
 
