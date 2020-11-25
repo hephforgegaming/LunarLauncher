@@ -22,8 +22,6 @@ private float time;
     void Start()
     {
         time = 0f;
-        minTime = 2;
-        maxTime = 5;
     }
 
     // Update is called once per frame

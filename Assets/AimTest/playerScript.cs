@@ -15,15 +15,20 @@ public class playerScript : MonoBehaviour
     public float forceFactor;
     public GameObject  reloadBall;  
     public float distance = 2f;
+    
+    public Sprite[] rockSkins;
 
     public GameObject trajectoryDot, nextBall, startScreen;
 
     private GameObject[] trajectoryDots;
     public int number;
     private bool canShoot = true;
+    private bool launchable = false;
     private bool canReload = false;
     private bool blackHoled = false;
-    
+    public SpriteRenderer spriteRenderer;
+         Ray ray;
+     RaycastHit hit;
 
 
     // Start is called before the first frame update
@@ -37,6 +42,8 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
             {
                 reloadBall.SetActive(true);
@@ -49,7 +56,7 @@ public class playerScript : MonoBehaviour
         }
 
         if(canShoot == true){
-        if(Input.GetMouseButtonDown(0)) { //click
+        if(Input.GetMouseButtonDown(0)  &&  launchable == true) { //click
 
             startPos = gameObject.transform.position;
             for (int i = 0; i < number; i++)
@@ -58,7 +65,7 @@ public class playerScript : MonoBehaviour
             }
             
         }
-        if(Input.GetMouseButton(0) && LevelTracker.canLoad == true) { //drag
+        if(Input.GetMouseButton(0) && LevelTracker.canLoad == true  &&  launchable == true) { //drag
 
             endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
             //Debug.Log(endPos);
@@ -77,7 +84,7 @@ public class playerScript : MonoBehaviour
                 trajectoryDots[i].transform.position = calculatePosition(i * 0.1f);
             }
         }
-        if(Input.GetMouseButtonUp(0) && LevelTracker.canLoad == true) { //leave
+        if(Input.GetMouseButtonUp(0) && LevelTracker.canLoad == true  &&  launchable == true) { //leave
             GetComponent<AudioSource>().Play();  
             rigidbody.gravityScale = 1;
             rigidbody.velocity = new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor);
@@ -87,6 +94,8 @@ public class playerScript : MonoBehaviour
             }
             Attaractor.beAttracted = true;
             LevelTracker.ShotCounter();
+            canShoot = false;
+            launchable = false;
         }
         if(Input.GetKey(KeyCode.Space)) {
         if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
@@ -96,17 +105,27 @@ public class playerScript : MonoBehaviour
                 canReload = false;
             }
             if(canReload == true){
+            var skin = Random.Range(0,3);
+            spriteRenderer.sprite = rockSkins[skin];
             rigidbody.gravityScale = 0;
             rigidbody.velocity = Vector2.zero;
              gameObject.transform.position = initPos;
              canReload = false;
              Attaractor.beAttracted = false;
              blackHoled = false;
+             //canShoot = true;
             }
             
         }
         }
     }
+
+    void OnMouseEnter()
+{
+    Debug.Log("Mouse over item " + gameObject.name);
+    launchable = true;
+   // do something, e.g. change the sprite or make a sound
+}
 
     private void OnCollisionEnter2D(Collision2D other) {
         if(other.gameObject.tag == "Blackhole")
@@ -115,6 +134,12 @@ public class playerScript : MonoBehaviour
             blackHoled = true;
         }
     }
+
+    void OnMouseExit()
+{
+    //canShoot = false;
+   // do something, e.g. change the sprite or make a sound
+}
 
     private Vector2 calculatePosition(float elapsedTime) {
         return new Vector2(endPos.x, endPos.y) + //X0

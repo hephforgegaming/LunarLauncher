@@ -9,8 +9,9 @@ public class PlayLevel : MonoBehaviour
 {
     public static PlayLevel instance;
    
-    public GameObject gameComplete, optionsScreen, loadingScreen, loadingIcon, nextLevel, currentLevel;
+    public GameObject stageComplete, optionsScreen, loadingScreen, loadingIcon, nextLevel, currentLevel;
     public Text stageParTxt;
+    public GameObject oneStar, twoStar, threeStar, starOutline, levelLock;
     public int stagePar;
         public Text loadingText;
         private bool isLoading;
@@ -32,8 +33,9 @@ public class PlayLevel : MonoBehaviour
     {
         if(PlayerPrefs.GetInt(gameObject.name)  == 1)
         {
-             this.gameObject.transform.GetChild(0).GetChild(0).gameObject.SetActive(true);
-            this.gameObject.transform.GetChild(1).GetChild(0).gameObject.SetActive(true);
+            stageComplete.SetActive(true);
+            levelLock.SetActive(false);
+            starOutline.SetActive(true);
             showStars();
         }
     }
@@ -63,13 +65,17 @@ public class PlayLevel : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(gameObject.name + "-shots") <= stagePar && PlayerPrefs.GetInt(gameObject.name + "-shots") != 0)
         {
-        this.gameObject.transform.GetChild(0).GetChild(3).gameObject.SetActive(true);
+        oneStar.SetActive(true);
+        twoStar.SetActive(true);
+        threeStar.SetActive(true);
         }  else if (PlayerPrefs.GetInt(gameObject.name + "-shots") == (stagePar + 1))
         {
-        this.gameObject.transform.GetChild(0).GetChild(2).gameObject.SetActive(true);
+        oneStar.SetActive(true);
+        twoStar.SetActive(true);
         } else if (PlayerPrefs.GetInt(gameObject.name + "-shots") == (stagePar + 2))
         {
-        this.gameObject.transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
+            oneStar.SetActive(true);
+
         }
     }
 

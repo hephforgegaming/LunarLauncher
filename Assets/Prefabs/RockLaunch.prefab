@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 9042187756544920672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3, z: 0}
-  m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.025}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e3d2b027dff1c6148a50ddc970ea9291, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: efb9a5b7c36070f44ba7a02614bf149e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,18 +99,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.24514389, y: -0.18386364}
+  m_Offset: {x: -0.110541195, y: -0.047110677}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 32.20099, y: 30.44}
+    oldSize: {x: 3, y: 2.25}
     newSize: {x: 32.20099, y: 30.44}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 22.640343, y: 22.472761}
+  m_Size: {x: 1.3549914, y: 1.0781956}
   m_EdgeRadius: 0
 --- !u!50 &9042187756544920686
 Rigidbody2D:
@@ -148,10 +148,16 @@ MonoBehaviour:
   initPos: {x: 0, y: -3, z: 0}
   forceFactor: 8
   reloadBall: {fileID: 0}
-  trajectoryDot: {fileID: 1152180298276607188, guid: ed33fd76ed649e046a6540761b0b9134, type: 3}
+  distance: 2
+  rockSkins:
+  - {fileID: 21300000, guid: efb9a5b7c36070f44ba7a02614bf149e, type: 3}
+  - {fileID: 21300000, guid: cf99011b853398e4790d248faa8afedf, type: 3}
+  - {fileID: 21300000, guid: bada8f75eb3f770469d382a7c38b1620, type: 3}
+  trajectoryDot: {fileID: 8677830771909633636, guid: cee48f59acd116743857b3f31224b26b, type: 3}
   nextBall: {fileID: 0}
   startScreen: {fileID: 0}
   number: 4
+  spriteRenderer: {fileID: 0}
 --- !u!114 &6000193595897227664
 MonoBehaviour:
   m_ObjectHideFlags: 0
