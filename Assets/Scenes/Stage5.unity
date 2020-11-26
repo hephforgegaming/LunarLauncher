@@ -378,6 +378,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 3977917851272784802, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2449e30e073e58e43b64dd640b29b6bd, type: 3}
     - target: {fileID: 4277040089921913351, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -451,6 +455,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 3977917851272784802, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2449e30e073e58e43b64dd640b29b6bd, type: 3}
     - target: {fileID: 4277040090543158587, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.483
@@ -540,6 +548,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 1051441311162132618, guid: e2050945215fc1949af558039fde9b62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2449e30e073e58e43b64dd640b29b6bd, type: 3}
     - target: {fileID: 1460992187982551932, guid: e2050945215fc1949af558039fde9b62, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -653,6 +665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3644518287634888341, guid: 08d5683632578444ab6a19a60a5fd31d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2449e30e073e58e43b64dd640b29b6bd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08d5683632578444ab6a19a60a5fd31d, type: 3}
 --- !u!4 &1226525562 stripped
@@ -696,6 +712,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 1793873131372543771, guid: c037b92fbe14abd4199549469b4fb234, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2449e30e073e58e43b64dd640b29b6bd, type: 3}
     - target: {fileID: 8420338826089429743, guid: c037b92fbe14abd4199549469b4fb234, type: 3}
       propertyPath: m_Sprite
       value: 
