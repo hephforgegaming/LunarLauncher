@@ -197,6 +197,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.161
       objectReference: {fileID: 0}
+    - target: {fileID: 3551188637114339728, guid: 1fc4c01813315a247b781561ee102d40, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47e140097d07f1d41ac7713dbd82abfd, type: 3}
     - target: {fileID: 3551188637114339735, guid: 1fc4c01813315a247b781561ee102d40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -401,6 +405,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlanetVert (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8999947318249397237, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47e140097d07f1d41ac7713dbd82abfd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
 --- !u!4 &1120003950 stripped
@@ -471,6 +479,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8999947318249397237, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 47e140097d07f1d41ac7713dbd82abfd, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
 --- !u!4 &5251997644581576175 stripped

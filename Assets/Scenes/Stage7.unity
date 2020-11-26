@@ -389,6 +389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 7333341431052997756, guid: a85af477c5fe4644f92697a87006e488, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     - target: {fileID: 7917956172330894001, guid: a85af477c5fe4644f92697a87006e488, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -494,6 +498,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4277040091314077665, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
 --- !u!4 &926366457 stripped
@@ -528,6 +536,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 8420338826089429743, guid: c037b92fbe14abd4199549469b4fb234, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     - target: {fileID: 8420338826133703024, guid: c037b92fbe14abd4199549469b4fb234, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -643,6 +655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MovingPlanetVert
       objectReference: {fileID: 0}
+    - target: {fileID: 8999947318249397237, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1262a2b8eb46b844aac04cdba66fb38f, type: 3}
 --- !u!1 &1694432321 stripped
@@ -710,6 +726,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8296133631969010865, guid: 8cc4f19a21cd3c043aad81f5bb3e70d6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8cc4f19a21cd3c043aad81f5bb3e70d6, type: 3}
 --- !u!1001 &1917592818
@@ -719,6 +739,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 437427846}
     m_Modifications:
+    - target: {fileID: 1460992187982551932, guid: e2050945215fc1949af558039fde9b62, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e9c6cf4f746dd741a24c394eea1194c, type: 3}
     - target: {fileID: 8198767024126932441, guid: e2050945215fc1949af558039fde9b62, type: 3}
       propertyPath: m_Name
       value: PlanetAngle
