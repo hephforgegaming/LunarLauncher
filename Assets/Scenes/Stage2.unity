@@ -340,7 +340,7 @@ PrefabInstance:
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: enemies.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 845978611}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
 --- !u!1 &437427844
@@ -534,6 +534,11 @@ PrefabInstance:
 --- !u!4 &845978610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2845556425739857647, guid: 08d5683632578444ab6a19a60a5fd31d, type: 3}
+  m_PrefabInstance: {fileID: 845978609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &845978611 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3403393869999620362, guid: 08d5683632578444ab6a19a60a5fd31d, type: 3}
   m_PrefabInstance: {fileID: 845978609}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &918860624 stripped
