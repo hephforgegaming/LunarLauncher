@@ -14,7 +14,7 @@ public class SunPlanetDetection : MonoBehaviour
     void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
-        Debug.Log(basePlanet.sortingOrder);
+        Debug.Log(rp1.ToString());
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class SunPlanetDetection : MonoBehaviour
         {
             
             sprite.sortingOrder = basePlanet.sortingOrder - 1;
-            if (sprite.sortingOrder == -3)
+            if (sprite.sortingOrder < 0)
             {
                 gameObject.layer = 14;
             }else{
@@ -36,8 +36,8 @@ public class SunPlanetDetection : MonoBehaviour
         {
 
             sprite.sortingOrder = basePlanet.sortingOrder + 1;
-            Debug.Log(sprite.sortingOrder);
-            if (sprite.sortingOrder == -3)
+            //Debug.Log(sprite.sortingOrder);
+            if (sprite.sortingOrder < 0)
             {
                 gameObject.layer = 14;
             }else{
@@ -59,13 +59,16 @@ public class SunPlanetDetection : MonoBehaviour
 
         if(otherObj.ToString() == rp2.ToString())
         {
+
             hidden = 0;
             //Debug.Log(hidden);
-            //Debug.Log("Hidden set to 0");
+            Debug.Log("Hidden set to 0");
             
         }
         if(otherObj.ToString() == rp1.ToString()) {
+
             hidden = 1;
+            Debug.Log("Hidden set to 1");
             
         }     
          //Debug.Log(planet);
