@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/WorldMap.unity
     guid: 72376a76b034dd945a4dccb815b3d069
   - enabled: 1
+    path: Assets/Scenes/Stage0.unity
+    guid: 525290bc3c0682c46adf01c4bd8a4476
+  - enabled: 1
     path: Assets/Scenes/Stage1.unity
     guid: 10b2542af733a684f9d31f8b4eca9422
   - enabled: 1

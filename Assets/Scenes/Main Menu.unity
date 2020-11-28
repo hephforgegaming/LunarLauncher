@@ -1074,6 +1074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstLevel: WorldMap
+  demoLevel: Stage0
   optionsScreen: {fileID: 2062556759}
   loadingScreen: {fileID: 1502207819}
   loadingIcon: {fileID: 887589689}

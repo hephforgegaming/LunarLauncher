@@ -91,6 +91,10 @@ public class playerScript : MonoBehaviour
             LevelTracker.ShotCounter();
             canShoot = false;
             launchable = false;
+            if(PlayerPrefs.GetInt("DemoComplete") == 0)
+            {
+            DemoLevel.gblLaunchExp.SetActive(false);
+            }
             StartCoroutine(RockSpawn());
 
         }
