@@ -2993,6 +2993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3303435504074240742, guid: 6f38b533c825aa046ab8fa0b85127829, type: 3}
+      propertyPath: playBGMusic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4660629771681430792, guid: 6f38b533c825aa046ab8fa0b85127829, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -3077,10 +3081,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 3371656160045703407, guid: 449cc50173a8f604f8f1f916642cf107, type: 2}
   m_audioClip: {fileID: 8300000, guid: 551c8a069b4e44644a1e88f6597497a1, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
