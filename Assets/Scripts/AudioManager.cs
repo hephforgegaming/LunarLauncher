@@ -6,9 +6,16 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioMixer theMixer;
+    public bool playBGMusic;
     // Start is called before the first frame update
     void Start()
     {
+        if(playBGMusic == true){
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPersist>().PlayMusic();
+        } else {
+            GameObject.FindGameObjectWithTag("Music").GetComponent<MusicPersist>().StopMusic();
+        }
+
         
         if(PlayerPrefs.HasKey("MasterVol"))
         {
