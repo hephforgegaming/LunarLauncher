@@ -42,7 +42,7 @@ public GameObject highScoreText;
         var m_scene = SceneManager.GetActiveScene();
         stageName = m_scene.name;
         Debug.Log(stageName);
-        loadBall.SetActive(true);
+        //loadBall.SetActive(true);
         Debug.Log(currentLevel + " is being played");
         levelTitle.text = stageName.ToString();
         Time.timeScale = 0f;
@@ -66,8 +66,8 @@ public GameObject highScoreText;
     {
         if(Input.GetKeyDown(KeyCode.Space) && canLoad == true)
         {
-            loadBall.SetActive(false);
-            rockLauncher.SetActive(true);
+            //loadBall.SetActive(false);
+            //rockLauncher.SetActive(true);
         }
 
             for(int i = 0; i < enemies.Count; i++)
@@ -150,6 +150,7 @@ public GameObject highScoreText;
 
     public void StartLevel()
     {
+        Debug.Log("Starting Level");
         levelStartScreen.SetActive(false);
         scoreTracker.SetActive(true);
         canLoad = true;

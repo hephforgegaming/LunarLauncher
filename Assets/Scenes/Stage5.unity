@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: number
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: forceFactor

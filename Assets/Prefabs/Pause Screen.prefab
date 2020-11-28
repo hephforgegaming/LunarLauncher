@@ -464,7 +464,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 147271761376112672, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_Text
-      value: Main Menu
+      value: Exit Level
       objectReference: {fileID: 0}
     - target: {fileID: 3095454606017383919, guid: a6fb9dabe8de44948a48cbf828446c4c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

@@ -183,13 +183,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: theRB
+      value: 
+      objectReference: {fileID: 1694819162}
+    - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: number
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: forceFactor
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: rockLauncher
+      value: 
+      objectReference: {fileID: 1694819157}
+    - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: spriteRenderer
+      value: 
+      objectReference: {fileID: 1694819164}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: shotGoal
       value: 4
@@ -214,6 +226,10 @@ PrefabInstance:
       propertyPath: enemies.Array.data[3]
       value: 
       objectReference: {fileID: 188410391}
+    - target: {fileID: 8843906128031508919, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.193115
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
 --- !u!4 &54711180 stripped
@@ -368,6 +384,21 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3683139111788285955, guid: 4a9bd467fdce2c74eb0e2e7ddb5ad787, type: 3}
   m_PrefabInstance: {fileID: 3596107638407058514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1694819157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4570747308756864949, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+  m_PrefabInstance: {fileID: 54711179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1694819162 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 4570747308756864955, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+  m_PrefabInstance: {fileID: 54711179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1694819164 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4570747308756864953, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+  m_PrefabInstance: {fileID: 54711179}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &593685608046767085
 PrefabInstance:
