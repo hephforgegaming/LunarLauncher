@@ -184,7 +184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 255.10007, y: 141}
+  m_AnchoredPosition: {x: 255.10007, y: -1137}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &246256757
@@ -240,8 +240,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.9, y: -42.8}
-  m_SizeDelta: {x: 1640.6754, y: 677.92346}
+  m_AnchoredPosition: {x: 2.9, y: -44.8}
+  m_SizeDelta: {x: 1640.6754, y: 625.10046}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &251631711
 MonoBehaviour:
@@ -1224,75 +1224,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1363617725}
   m_CullTransparentMesh: 0
---- !u!1001 &1364806740
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7434484776575476329, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.2147471
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.49040478
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.33879876
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7736939
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 132.703
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -115.263
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476331, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476334, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_Name
-      value: Particle System
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776575476334, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7434484776942278823, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8830ec8bd4adccf4ab8b64535911bef4, type: 3}
 --- !u!1 &1443093956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,7 +1483,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "Hephaestus' Forge\n@HephForgeGaming\n\nSarah Besserer\n@ArabearieArt\n\nYazen
-    Almasri\nartstation.com/\n      codecandystudios\n\nMizael\n\nMars\n\nMyke"
+    Almasri\nartstation.com/\n      codecandystudios\n\nMizael\n\nMars\n\nMyke V.\n\nSummer
+    T. \n@dragonGlitchLLC"
 --- !u!222 &1766412301
 CanvasRenderer:
   m_ObjectHideFlags: 0

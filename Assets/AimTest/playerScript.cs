@@ -10,11 +10,12 @@ public class playerScript : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     public Vector3 initPos;
-    private Rigidbody2D rigidbody;
+    public Rigidbody2D theRB;
     private Vector3 forceAtPlayer;
     public float forceFactor;
     public GameObject  reloadBall;  
     public float distance = 2f;
+    public GameObject rockLauncher;
     
     public Sprite[] rockSkins;
 
@@ -34,8 +35,9 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initPos = gameObject.transform.position;
-        rigidbody = GetComponent<Rigidbody2D>();
+        var skin = Random.Range(0,3);
+        spriteRenderer.sprite = rockSkins[skin];
+        initPos = rockLauncher.transform.position;
         trajectoryDots = new GameObject[number];
     }
 
@@ -43,13 +45,6 @@ public class playerScript : MonoBehaviour
     void Update()
     {
 
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
-            {
-                reloadBall.SetActive(true);
-            } else {
-                reloadBall.SetActive(false);
-            }
         if(Input.GetKeyDown(KeyCode.Space))
         {
             canShoot = true;
@@ -58,10 +53,10 @@ public class playerScript : MonoBehaviour
         if(canShoot == true){
         if(Input.GetMouseButtonDown(0)  &&  launchable == true) { //click
 
-            startPos = gameObject.transform.position;
+            startPos = rockLauncher.transform.position;
             for (int i = 0; i < number; i++)
             {
-                trajectoryDots[i] = Instantiate(trajectoryDot, gameObject.transform);
+                trajectoryDots[i] = Instantiate(trajectoryDot, rockLauncher.transform);
             }
             
         }
@@ -71,10 +66,10 @@ public class playerScript : MonoBehaviour
             //Debug.Log(endPos);
             if (Vector3.Distance(endPos, startPos) > distance)
             {
-                gameObject.transform.position = startPos + (endPos - startPos).normalized * distance;
+                rockLauncher.transform.position = startPos + (endPos - startPos).normalized * distance;
                 forceAtPlayer = endPos - startPos;
             } else {
-            gameObject.transform.position = endPos;
+            rockLauncher.transform.position = endPos;
                         forceAtPlayer = endPos - startPos;
             }
             //gameObject.transform.position = endPos;
@@ -86,8 +81,8 @@ public class playerScript : MonoBehaviour
         }
         if(Input.GetMouseButtonUp(0) && LevelTracker.canLoad == true  &&  launchable == true) { //leave
             GetComponent<AudioSource>().Play();  
-            rigidbody.gravityScale = 1;
-            rigidbody.velocity = new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor);
+            theRB.gravityScale = 1;
+            theRB.velocity = new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor);
             for (int i = 0; i < number; i++)
             {
                 Destroy(trajectoryDots[i]);
@@ -96,8 +91,10 @@ public class playerScript : MonoBehaviour
             LevelTracker.ShotCounter();
             canShoot = false;
             launchable = false;
+            StartCoroutine(RockSpawn());
+
         }
-        if(Input.GetKey(KeyCode.Space)) {
+        /*if(Input.GetKey(KeyCode.Space)) {
         if(((transform.position.y < -7 || (transform.position.x < -9.5f) || (transform.position.x > 9.5f)) && LevelTracker.enemyCounter != 0) || blackHoled == true  && LevelTracker.enemyCounter != 0)
             {
                 canReload = true;
@@ -105,10 +102,11 @@ public class playerScript : MonoBehaviour
                 canReload = false;
             }
             if(canReload == true){
+                LaunchController.SpawnRock();
             var skin = Random.Range(0,3);
             spriteRenderer.sprite = rockSkins[skin];
-            rigidbody.gravityScale = 0;
-            rigidbody.velocity = Vector2.zero;
+            theRB.gravityScale = 0;
+            theRB.velocity = Vector2.zero;
              gameObject.transform.position = initPos;
              canReload = false;
              Attaractor.beAttracted = false;
@@ -116,13 +114,13 @@ public class playerScript : MonoBehaviour
              //canShoot = true;
             }
             
-        }
+        }*/
         }
     }
 
     void OnMouseEnter()
 {
-    Debug.Log("Mouse over item " + gameObject.name);
+    //Debug.Log("Mouse over item " + gameObject.name);
     launchable = true;
    // do something, e.g. change the sprite or make a sound
 }
@@ -146,5 +144,16 @@ public class playerScript : MonoBehaviour
                 new Vector2(-forceAtPlayer.x * forceFactor, -forceAtPlayer.y * forceFactor) * elapsedTime + //ut
                 0.5f * Physics2D.gravity * elapsedTime * elapsedTime ;
     }
+
+    public IEnumerator RockSpawn()
+    {
+                Debug.Log("Waiting to Spawn Ball");
+
+        yield return new WaitForSeconds(1f);
+        Debug.Log("Spawning Ball");
+        LaunchController.SpawnRock();
+                yield return new WaitForSeconds(5f);
+                Destroy(gameObject);
+    } 
 
 }

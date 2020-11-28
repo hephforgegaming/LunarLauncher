@@ -251,6 +251,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StageTemplate
       objectReference: {fileID: 0}
+    - target: {fileID: 132565805857115771, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 192032153867638314, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -295,9 +299,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4570747308756864949, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: forceFactor
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4761082911038300538, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4761082911083441722, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: enemies.Array.data[0]
@@ -311,6 +323,10 @@ PrefabInstance:
       propertyPath: enemies.Array.data[2]
       value: 
       objectReference: {fileID: 1264366813}
+    - target: {fileID: 8843906128031508919, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 38.193115
+      objectReference: {fileID: 0}
     - target: {fileID: 9010278553465866657, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.79
@@ -471,7 +487,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4570747308756864954, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f729f2a17f377948bff356614a5043d, type: 3}
 --- !u!4 &677852411 stripped
 Transform:
