@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    public string firstLevel;
+    public string firstLevel, demoLevel;
 
     public GameObject optionsScreen, loadingScreen, loadingIcon, finalScore, creditsScreen;
 
@@ -75,8 +75,13 @@ public class MainMenu : MonoBehaviour
         public IEnumerator loadStart()
     {
         //loadingScreen.SetActive(true);
+        if(PlayerPrefs.GetInt("DemoComplete") == 1)
+        {
+            SceneManager.LoadSceneAsync(firstLevel);
+        } else {
+                    SceneManager.LoadSceneAsync(demoLevel);
 
-        SceneManager.LoadSceneAsync(firstLevel);
+        }
 
         /*asyncLoad.allowSceneActivation = false;
 

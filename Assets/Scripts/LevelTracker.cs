@@ -10,6 +10,7 @@ public class LevelTracker : MonoBehaviour
     public LevelManager unlockLevel;
     public static string gameComplete, levelBeingPlayed, currentLevel, bestShots, levelCompleted;
 
+    public bool isDemoLevel = false;
     //private LevelManager levelManagerScript;
     public static int enemyCounter;
     public GameObject loadBall, rockLauncher, levelCompleteScreen, levelStartScreen, scoreTracker, finalScore;
@@ -26,6 +27,8 @@ public GameObject highScoreText;
         public int shotGoal;
         private int shotTotal, bestShot;
         private string stageName;
+        public GameObject continueExp;
+        public static bool beenClicked = false;
 
 
         //public RoomActivator theRoom;
@@ -39,13 +42,17 @@ public GameObject highScoreText;
 
     void Start()
     {
+        if(isDemoLevel == true)
+        {
+           Time.timeScale = 1f;
+        } 
         var m_scene = SceneManager.GetActiveScene();
         stageName = m_scene.name;
         Debug.Log(stageName);
         //loadBall.SetActive(true);
         Debug.Log(currentLevel + " is being played");
         levelTitle.text = stageName.ToString();
-        Time.timeScale = 0f;
+
         bestShots = currentLevel + "-shots";
         levelCompleted = currentLevel + "-completed";
         //levelManagerScript = levelManager.GetComponent<LevelManager>();
@@ -150,10 +157,19 @@ public GameObject highScoreText;
 
     public void StartLevel()
     {
+        if(isDemoLevel == true && DemoLevel.canClick == true){
+         continueExp.SetActive(false);
+        levelStartScreen.SetActive(false);
+        scoreTracker.SetActive(true);
+        beenClicked = true;
+
+        } else if(isDemoLevel == false)
+        {
         Debug.Log("Starting Level");
         levelStartScreen.SetActive(false);
         scoreTracker.SetActive(true);
         canLoad = true;
         Time.timeScale = 1f;
+        }
     }
 }
