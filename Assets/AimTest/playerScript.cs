@@ -35,6 +35,7 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Attaractor.beAttracted = false;
         var skin = Random.Range(0,3);
         spriteRenderer.sprite = rockSkins[skin];
         initPos = rockLauncher.transform.position;
@@ -133,7 +134,7 @@ public class playerScript : MonoBehaviour
         if(other.gameObject.tag == "Blackhole")
         {
             Debug.Log("Oh no! I'm stuck!!");
-            blackHoled = true;
+            //blackHoled = true;
         }
     }
 
