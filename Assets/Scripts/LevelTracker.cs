@@ -45,7 +45,10 @@ public GameObject highScoreText;
         if(isDemoLevel == true)
         {
            Time.timeScale = 1f;
-        } 
+        } else {
+                       Time.timeScale = 0f;
+
+        }
         var m_scene = SceneManager.GetActiveScene();
         stageName = m_scene.name;
         Debug.Log(stageName);
