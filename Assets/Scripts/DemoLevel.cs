@@ -60,8 +60,6 @@ public class DemoLevel : MonoBehaviour
         totEnemiesExp.SetActive(false);
         launchExp.SetActive(true);
         LevelTracker.canLoad = true;
-        PlayerPrefs.SetInt("DemoComplete",1);
-
 
     }
 }

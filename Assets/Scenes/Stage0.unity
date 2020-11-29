@@ -6118,9 +6118,7 @@ MonoBehaviour:
   bestScore: {fileID: 0}
   highScoreText: {fileID: 0}
   enemies:
-  - {fileID: 0}
   - {fileID: 2018715114}
-  - {fileID: 0}
   shotGoal: 3
   continueExp: {fileID: 1657123216}
 --- !u!4 &4761082910409792193

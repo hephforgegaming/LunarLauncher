@@ -127,6 +127,7 @@ public GameObject highScoreText;
         levelCompleteScreen.SetActive(true);
         PlayerPrefs.SetInt(levelBeingPlayed, 1);
         PlayerPrefs.SetInt(levelCompleted, 1);
+        PlayerPrefs.SetInt("DemoComplete",1);
         if(PlayerPrefs.GetInt(bestShots) == 0 )
         {
             Debug.Log(shotTotal);
