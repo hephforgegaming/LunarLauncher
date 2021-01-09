@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/HephForgeSplash.unity
     guid: 9e7103c8e1189284ab81f7e28b32f1e9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameOffSplash.unity
     guid: ebf46a9b0cba6804fbb8431965774855
   - enabled: 1
