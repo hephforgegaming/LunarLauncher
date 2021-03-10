@@ -248,7 +248,7 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 0.193
+  - 0.083
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
@@ -285,5 +285,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f93c34926aea8e43a4ced2c1ae1624a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: GameOffSplash
+  sceneToLoad: Main Menu
   timeToWait: 11

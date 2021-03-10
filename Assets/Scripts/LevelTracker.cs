@@ -63,7 +63,7 @@ public GameObject highScoreText;
         enemiesLeft = enemies.Count;
         enemiesToKill = enemies.Count;
         startEnemyCount.text = enemiesToKill.ToString();
-        startShotGoal.text = shotGoal.ToString();
+        startShotGoal.text = PlayerPrefs.GetInt(stageName + "-par").ToString();
         shotsFired = 0;
         bestShot = PlayerPrefs.GetInt(bestShots);
         Debug.Log(PlayerPrefs.GetInt(bestShots) + " is you best score for this level");

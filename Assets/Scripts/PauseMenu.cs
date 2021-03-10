@@ -58,14 +58,22 @@ public class PauseMenu : MonoBehaviour
 
     public void ExitLevel()
     {
+                    isPaused = false;
+
+            Time.timeScale = 1f;
         //SceneManager.LoadScene(mainMenuScene);
 
         //Time.timeScale = 1f;
+
+
         StartCoroutine(exitLevel());
     }
 
     public void QUitToMain()
     {
+                    isPaused = false;
+
+            Time.timeScale = 1f;
         //Time.timeScale = 1f;
         StartCoroutine(loadMain());
     }
@@ -101,6 +109,7 @@ public class PauseMenu : MonoBehaviour
         //loadingScreen.SetActive(true);
 
         SceneManager.LoadSceneAsync(worldMapScene);
+        
 
         /*asyncLoad.allowSceneActivation = false;
 

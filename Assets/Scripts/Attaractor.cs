@@ -37,7 +37,7 @@ public class Attaractor : MonoBehaviour
         Vector3 direction = rb.position - rbToAttract.position;
 
         float distance = direction.magnitude;
-        float forceMagnitude = (rb.mass * rbToAttract.mass) / Mathf.Pow(distance, 2);
+        float forceMagnitude = (rb.mass * 3 * rbToAttract.mass) / Mathf.Pow(distance, 2);
         Vector3 force = direction.normalized * forceMagnitude;
 
         rbToAttract.AddForce(force);

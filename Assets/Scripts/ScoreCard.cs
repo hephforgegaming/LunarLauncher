@@ -73,11 +73,13 @@ public class ScoreCard : MonoBehaviour
         if(!isScoreCard)
         {
             scoreCard.SetActive(true);
+            PlayLevel.canPlay = false;
             isScoreCard = true;
 
             Time.timeScale = 0f;
         } else {
             scoreCard.SetActive(false);
+            PlayLevel.canPlay = true;
             isScoreCard = false;
 
             Time.timeScale = 1f;
