@@ -17,6 +17,17 @@ public class ScoreCard : MonoBehaviour
     void Start()
     {
         //Set Par Values
+            PlayerPrefs.SetInt("Stage1-par", 5);
+            PlayerPrefs.SetInt("Stage2-par", 4);
+            PlayerPrefs.SetInt("Stage3-par", 7);
+            PlayerPrefs.SetInt("Stage4-par", 4);
+            PlayerPrefs.SetInt("Stage5-par", 6);
+            PlayerPrefs.SetInt("Stage6-par", 5);
+            PlayerPrefs.SetInt("Stage7-par", 6);
+            PlayerPrefs.SetInt("Stage8-par", 6);
+            PlayerPrefs.SetInt("Stage9-par", 6);
+            PlayerPrefs.SetInt("Stage10-par", 7);
+        //Get Par Values
             par1.text = PlayerPrefs.GetInt("Stage1-par").ToString(); 
             par2.text = PlayerPrefs.GetInt("Stage2-par").ToString();  
             par3.text = PlayerPrefs.GetInt("Stage3-par").ToString();
