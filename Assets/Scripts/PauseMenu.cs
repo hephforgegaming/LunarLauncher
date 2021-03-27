@@ -59,7 +59,7 @@ public class PauseMenu : MonoBehaviour
     public void ExitLevel()
     {
                     isPaused = false;
-
+             PlayLevel.canPlay = true;
             Time.timeScale = 1f;
         //SceneManager.LoadScene(mainMenuScene);
 
@@ -82,6 +82,7 @@ public class PauseMenu : MonoBehaviour
     {
         loadingScreen.SetActive(true);
         finalScore.SetActive(false);
+         PlayLevel.canPlay = true;
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(mainMenuScene);
 
